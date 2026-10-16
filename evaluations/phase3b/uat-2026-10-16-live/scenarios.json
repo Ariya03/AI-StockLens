@@ -1,0 +1,180 @@
+[
+  {
+    "id": "E01",
+    "scenario": "打开页面，输入 PE不超过20倍，点击 AI 解析",
+    "expected": "READY；pe_ttm/lte/20；精确原文引用；不取金融数据",
+    "actual": "实际模型 READY，引用 PE不超过20倍；API 返回一条用户规则；调用计数 0→0",
+    "status": "PASS",
+    "ollama": true,
+    "fuyao": false,
+    "evidence": [
+      "01-proposal.jpg",
+      "model-events.json",
+      "api-events.json"
+    ]
+  },
+  {
+    "id": "E02",
+    "scenario": "审阅并点击 确认原文与条件一致，替换当前编辑条件",
+    "expected": "确认前不替换、不自动筛选；确认后只修改草稿",
+    "actual": "确认前仍为四条建议草稿；确认后仅 PE TTM≤20，结果区仍空，无 screen 请求",
+    "status": "PASS",
+    "ollama": true,
+    "fuyao": false,
+    "evidence": [
+      "01-proposal.jpg",
+      "api-events.json"
+    ]
+  },
+  {
+    "id": "E03",
+    "scenario": "点击 获取真实数据并筛选；展开 PE 数据依据和快照",
+    "expected": "用真实三股数据判断并解释",
+    "actual": "7 次扶摇请求均 HTTP200/code0；1入选、2排除、0未知；PE 与供应商响应逐值一致",
+    "status": "PASS",
+    "ollama": true,
+    "fuyao": true,
+    "evidence": [
+      "02-screen.jpg",
+      "provider-events.json",
+      "api-events.json",
+      "verification.json"
+    ]
+  },
+  {
+    "id": "E04",
+    "scenario": "将市盈率条件阈值20改为45，点击 使用原快照比较条件",
+    "expected": "同快照重算，新增入选与未变解释正确；无新增扶摇请求",
+    "actual": "原快照及原始20倍规则保留；茅台/同花顺新增，平安银行仍入选；调用计数7→7；证据对象及数值不变",
+    "status": "PASS",
+    "ollama": false,
+    "fuyao": "复用实际数据，没有新增请求",
+    "evidence": [
+      "03-compare.jpg",
+      "api-events.json",
+      "verification.json"
+    ]
+  },
+  {
+    "id": "F01",
+    "scenario": "输入 想找稳健的公司，再点击 AI 解析",
+    "expected": "CLARIFY，无可执行 AI 规则",
+    "actual": "CLARIFY，规则为空，人工草稿不变，无确认按钮",
+    "status": "PASS",
+    "ollama": true,
+    "fuyao": false,
+    "evidence": [
+      "04-clarify.jpg",
+      "model-events.json",
+      "api-events.json"
+    ]
+  },
+  {
+    "id": "F02",
+    "scenario": "输入 PE不超过20倍，股息率至少3%，点击 AI 解析",
+    "expected": "不执行不支持条件；不能默默替换或部分执行",
+    "actual": "模型原始 CLARIFY，误将股息率映射为 PE；API REJECTED、空规则，界面无应用按钮；安全遏制PASS，正确语义解释FAIL",
+    "status": "PASS",
+    "semanticStatus": "FAIL",
+    "ollama": true,
+    "fuyao": false,
+    "evidence": [
+      "05-dividend-rejected.jpg",
+      "model-events.json",
+      "api-events.json"
+    ]
+  },
+  {
+    "id": "F03",
+    "scenario": "输入 PE不超过20倍或ROE大于10%，点击 AI 解析",
+    "expected": "OR不能被静默作为AND执行",
+    "actual": "模型原始 CLARIFY；API REJECTED、空规则；原手动草稿保留；安全遏制PASS，正确UNSUPPORTED解释FAIL",
+    "status": "PASS",
+    "semanticStatus": "FAIL",
+    "ollama": true,
+    "fuyao": false,
+    "evidence": [
+      "06-or-rejected.jpg",
+      "model-events.json",
+      "api-events.json"
+    ]
+  },
+  {
+    "id": "F04",
+    "scenario": "取消提案，清空市盈率阈值",
+    "expected": "有限数值校验失败，阻止筛选和比较",
+    "actual": "中文提示阈值必须为有限数值，两个执行按钮禁用，没有新增API取数请求",
+    "status": "PASS",
+    "ollama": false,
+    "fuyao": false,
+    "evidence": [
+      "07-invalid-threshold.jpg",
+      "api-events.json"
+    ]
+  },
+  {
+    "id": "F05",
+    "scenario": "恢复建议条件，设第一条PE>30、第二条PE≤20",
+    "expected": "条件冲突，阻止执行",
+    "actual": "显示两条具体冲突规则；screen/compare按钮均禁用；无新增取数",
+    "status": "PASS",
+    "ollama": false,
+    "fuyao": false,
+    "evidence": [
+      "08-conflicting-rules.jpg",
+      "api-events.json"
+    ]
+  },
+  {
+    "id": "E05",
+    "scenario": "恢复后显式加载 只观察估值范围 示例，点击 重新获取数据并筛选",
+    "expected": "独立手动工作流不依赖模型，真实PE>0且≤25筛选",
+    "actual": "没有新增Ollama调用；明确创建新快照，另7次实际扶摇调用，2入选1排除0未知；当前值与第一份快照不同，不混入原What-if",
+    "status": "PASS",
+    "ollama": false,
+    "fuyao": true,
+    "evidence": [
+      "09-manual-screen.jpg",
+      "provider-events.json",
+      "api-events.json"
+    ]
+  },
+  {
+    "id": "F06",
+    "scenario": "供应商实际缺失金融指标",
+    "expected": "受影响条件UNKNOWN，不补数据",
+    "actual": "两次真实快照均有三个指标，没有真实缺字段响应；未人为伪造数据来计作UAT",
+    "status": "NOT VERIFIED",
+    "ollama": false,
+    "fuyao": "本轮正常响应，不是缺失场景",
+    "evidence": [
+      "provider-events.json",
+      "api-events.json"
+    ]
+  },
+  {
+    "id": "F07",
+    "scenario": "Ollama真实不可用时的错误与手动退路",
+    "expected": "中文模型错误，手动流程仍可用",
+    "actual": "模型始终可用；没有停止用户共享Ollama服务。独立手动筛选已验证，但真实模型停机错误未验证",
+    "status": "NOT VERIFIED",
+    "ollama": false,
+    "fuyao": false,
+    "evidence": [
+      "model-events.json",
+      "09-manual-screen.jpg"
+    ]
+  },
+  {
+    "id": "F08",
+    "scenario": "真实快照15分钟TTL到期后点击比较",
+    "expected": "拒绝比较并要求显式刷新，不悄悄取数",
+    "actual": "本轮比较在有效期内；未改变时钟/TTL或伪造过期响应，未等待本次手动快照真实到期",
+    "status": "NOT VERIFIED",
+    "ollama": false,
+    "fuyao": false,
+    "evidence": [
+      "api-events.json"
+    ]
+  }
+]

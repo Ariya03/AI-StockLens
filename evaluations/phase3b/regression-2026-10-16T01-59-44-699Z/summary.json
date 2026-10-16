@@ -1,0 +1,6 @@
+{
+  "passed": 0,
+  "failed": 16,
+  "transportFailure": true,
+  "reason": "本机 Ollama 不可用或指定模型未安装；测试失败，不跳过。"
+}

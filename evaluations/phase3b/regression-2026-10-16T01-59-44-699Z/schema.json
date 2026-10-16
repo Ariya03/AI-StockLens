@@ -1,0 +1,95 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "outcome",
+    "conditions",
+    "issues"
+  ],
+  "properties": {
+    "outcome": {
+      "type": "string",
+      "enum": [
+        "READY",
+        "CLARIFY",
+        "UNSUPPORTED"
+      ]
+    },
+    "conditions": {
+      "type": "array",
+      "maxItems": 20,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "metric",
+          "operator",
+          "value",
+          "evidence"
+        ],
+        "properties": {
+          "metric": {
+            "type": "string",
+            "enum": [
+              "pe_ttm",
+              "roe_annual",
+              "daily_volatility_60d"
+            ]
+          },
+          "operator": {
+            "type": "string",
+            "enum": [
+              "gt",
+              "gte",
+              "lt",
+              "lte",
+              "eq"
+            ]
+          },
+          "value": {
+            "type": "number"
+          },
+          "evidence": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 2000
+          }
+        }
+      }
+    },
+    "issues": {
+      "type": "array",
+      "maxItems": 10,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "kind",
+          "evidence",
+          "question"
+        ],
+        "properties": {
+          "kind": {
+            "type": "string",
+            "enum": [
+              "AMBIGUOUS",
+              "UNSUPPORTED",
+              "CONFLICT",
+              "ADVERSARIAL"
+            ]
+          },
+          "evidence": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 2000
+          },
+          "question": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 200
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,141 @@
+[
+  {
+    "input": "PE不超过20倍",
+    "raw": {
+      "outcome": "READY",
+      "conditions": [
+        {
+          "metric": "pe_ttm",
+          "operator": "lte",
+          "value": 20,
+          "evidence": "PE不超过20倍"
+        }
+      ],
+      "issues": []
+    },
+    "validator": {
+      "accepted": true,
+      "errors": [],
+      "parsed": {
+        "outcome": "READY",
+        "conditions": [
+          {
+            "metric": "pe_ttm",
+            "operator": "lte",
+            "value": 20,
+            "evidence": "PE不超过20倍"
+          }
+        ],
+        "issues": []
+      },
+      "executableRules": [
+        {
+          "id": "intent-1",
+          "metric": "pe_ttm",
+          "operator": "lte",
+          "value": 20,
+          "unit": "times",
+          "origin": "user"
+        }
+      ],
+      "spans": [
+        {
+          "evidence": "PE不超过20倍",
+          "start": 0,
+          "end": 8
+        }
+      ]
+    }
+  },
+  {
+    "input": "想找稳健的公司",
+    "raw": {
+      "outcome": "CLARIFY",
+      "conditions": [],
+      "issues": [
+        {
+          "kind": "AMBIGUOUS",
+          "evidence": "想找稳健的公司",
+          "question": "您希望用哪个指标及明确阈值衡量稳健？"
+        }
+      ]
+    },
+    "validator": {
+      "accepted": true,
+      "errors": [],
+      "parsed": {
+        "outcome": "CLARIFY",
+        "conditions": [],
+        "issues": [
+          {
+            "kind": "AMBIGUOUS",
+            "evidence": "想找稳健的公司",
+            "question": "您希望用哪个指标及明确阈值衡量稳健？"
+          }
+        ]
+      },
+      "executableRules": [],
+      "spans": []
+    }
+  },
+  {
+    "input": "PE不超过20倍，股息率至少3%",
+    "raw": {
+      "outcome": "CLARIFY",
+      "conditions": [
+        {
+          "metric": "pe_ttm",
+          "operator": "lte",
+          "value": 20,
+          "evidence": "PE不超过20倍"
+        },
+        {
+          "metric": "pe_ttm",
+          "operator": "gte",
+          "value": 3,
+          "evidence": "股息率至少3%"
+        }
+      ],
+      "issues": []
+    },
+    "validator": {
+      "accepted": false,
+      "errors": [
+        "METRIC_NOT_IN_EVIDENCE"
+      ],
+      "parsed": null,
+      "executableRules": [],
+      "spans": []
+    }
+  },
+  {
+    "input": "PE不超过20倍或ROE大于10%",
+    "raw": {
+      "outcome": "CLARIFY",
+      "conditions": [
+        {
+          "metric": "pe_ttm",
+          "operator": "lte",
+          "value": 20,
+          "evidence": "PE不超过20倍"
+        },
+        {
+          "metric": "roe_annual",
+          "operator": "gt",
+          "value": 10,
+          "evidence": "ROE大于10%"
+        }
+      ],
+      "issues": []
+    },
+    "validator": {
+      "accepted": false,
+      "errors": [
+        "REPORT_NOT_EXPLICIT"
+      ],
+      "parsed": null,
+      "executableRules": [],
+      "spans": []
+    }
+  }
+]

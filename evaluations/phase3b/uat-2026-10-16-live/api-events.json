@@ -1,0 +1,1890 @@
+[
+  {
+    "at": "2026-10-16T02:25:36.992Z",
+    "route": "/api/intent",
+    "httpStatus": 200,
+    "response": {
+      "status": "READY",
+      "rules": [
+        {
+          "id": "intent-1",
+          "metric": "pe_ttm",
+          "operator": "lte",
+          "value": 20,
+          "unit": "times",
+          "origin": "user"
+        }
+      ],
+      "evidence": [
+        "PE不超过20倍"
+      ],
+      "issues": [],
+      "message": "提案通过有限的确定性核验。请对照原文逐条审阅，确认后才会替换编辑中的条件；不会自动筛选。"
+    },
+    "financialCallsBefore": 0,
+    "financialCallsAfter": 0
+  },
+  {
+    "at": "2026-10-16T02:27:57.882Z",
+    "route": "/api/screen",
+    "httpStatus": 200,
+    "response": {
+      "snapshot": {
+        "id": "957d9df5-47af-43cc-97c5-1fbfda48f50e",
+        "createdAt": "2026-10-16T02:27:57.877Z",
+        "asOf": "2026-10-16",
+        "universe": {
+          "name": "三只已验证 A 股开发股票池",
+          "limited": true,
+          "size": 3
+        },
+        "stocks": [
+          {
+            "code": "600519.SH",
+            "name": "贵州茅台",
+            "metrics": {
+              "pe_ttm": {
+                "value": 20.217234,
+                "rawValue": 20.217234,
+                "provenance": {
+                  "endpoint": "/api/a-share/valuations/snapshot",
+                  "sourceField": "data.item[].pe_ttm",
+                  "unit": "times",
+                  "definition": "供应商 PE TTM，倍；零或负值不自动解释为便宜",
+                  "provider": "扶摇",
+                  "retrievedAt": "2026-10-16T02:27:56.742Z",
+                  "requestId": "8c2fbf8ca6554ea99fe294858c8006a5",
+                  "providerTimestamp": "2026-10-16T02:27:58.000Z",
+                  "timestampStatus": "known"
+                },
+                "issue": null
+              },
+              "roe_annual": {
+                "value": 32.53,
+                "rawValue": "32.5300",
+                "provenance": {
+                  "endpoint": "/api/a-share/financials/indicators",
+                  "sourceField": "data.abilities[].indicators[index_id=index_weighted_avg_roe].value",
+                  "unit": "percent",
+                  "reportPeriod": "2025-4",
+                  "disclosureDate": null,
+                  "definition": "index_weighted_avg_roe，2025 年报，供应商百分数原值；不表示经营改善",
+                  "provider": "扶摇",
+                  "retrievedAt": "2026-10-16T02:27:56.934Z",
+                  "requestId": "86c2ff64b41a43c09b232aeb808858d1",
+                  "providerTimestamp": null,
+                  "timestampStatus": "not-provided"
+                },
+                "issue": null
+              },
+              "daily_volatility_60d": {
+                "value": 1.4706325298686491,
+                "rawValue": null,
+                "provenance": {
+                  "endpoint": "/api/a-share/prices/historical",
+                  "sourceField": "data.item[].close_price / date_ms",
+                  "unit": "percent",
+                  "adjustment": "forward",
+                  "window": 60,
+                  "definition": "60 个日简单收益率的样本标准差 ×100；61 个前复权收盘价；分母 59；不年化",
+                  "provider": "扶摇",
+                  "retrievedAt": "2026-10-16T02:27:57.322Z",
+                  "requestId": "1f94717090b14c3badeb22156db7fc4f",
+                  "providerTimestamp": "2026-10-15T16:00:00.000Z",
+                  "timestampStatus": "known",
+                  "windowStart": "2026-07-16",
+                  "windowEnd": "2026-10-16"
+                },
+                "issue": null,
+                "derivedInputs": {
+                  "dates": [
+                    "2026-07-16",
+                    "2026-07-17",
+                    "2026-07-20",
+                    "2026-07-21",
+                    "2026-07-22",
+                    "2026-07-23",
+                    "2026-07-24",
+                    "2026-07-27",
+                    "2026-07-28",
+                    "2026-07-29",
+                    "2026-07-30",
+                    "2026-07-31",
+                    "2026-08-03",
+                    "2026-08-04",
+                    "2026-08-05",
+                    "2026-08-06",
+                    "2026-08-07",
+                    "2026-08-10",
+                    "2026-08-11",
+                    "2026-08-12",
+                    "2026-08-13",
+                    "2026-08-14",
+                    "2026-08-17",
+                    "2026-08-18",
+                    "2026-08-19",
+                    "2026-08-20",
+                    "2026-08-21",
+                    "2026-08-24",
+                    "2026-08-25",
+                    "2026-08-26",
+                    "2026-08-27",
+                    "2026-08-28",
+                    "2026-08-31",
+                    "2026-09-01",
+                    "2026-09-02",
+                    "2026-09-03",
+                    "2026-09-04",
+                    "2026-09-07",
+                    "2026-09-08",
+                    "2026-09-09",
+                    "2026-09-10",
+                    "2026-09-11",
+                    "2026-09-14",
+                    "2026-09-15",
+                    "2026-09-16",
+                    "2026-09-17",
+                    "2026-09-18",
+                    "2026-09-21",
+                    "2026-09-22",
+                    "2026-09-23",
+                    "2026-09-24",
+                    "2026-09-28",
+                    "2026-09-29",
+                    "2026-09-30",
+                    "2026-10-08",
+                    "2026-10-09",
+                    "2026-10-12",
+                    "2026-10-13",
+                    "2026-10-14",
+                    "2026-10-15",
+                    "2026-10-16"
+                  ],
+                  "closes": [
+                    1258.99,
+                    1253,
+                    1327.5,
+                    1308,
+                    1305,
+                    1292.01,
+                    1297.41,
+                    1289.5,
+                    1320,
+                    1321,
+                    1361.76,
+                    1350.6,
+                    1358.98,
+                    1328.36,
+                    1306.45,
+                    1308.55,
+                    1309.22,
+                    1348.86,
+                    1346.5,
+                    1343,
+                    1355.29,
+                    1341.99,
+                    1293.09,
+                    1297.99,
+                    1307.88,
+                    1291.5,
+                    1272.83,
+                    1304.66,
+                    1304,
+                    1302.8,
+                    1292.3,
+                    1297.4,
+                    1299.52,
+                    1299.56,
+                    1297.5,
+                    1298.88,
+                    1330,
+                    1316.01,
+                    1309.3,
+                    1290.88,
+                    1285.13,
+                    1275.16,
+                    1277.96,
+                    1272.75,
+                    1258,
+                    1266.98,
+                    1257.12,
+                    1252.57,
+                    1253.8,
+                    1251.24,
+                    1237,
+                    1243.88,
+                    1235.58,
+                    1258.62,
+                    1255.79,
+                    1263,
+                    1288,
+                    1274.89,
+                    1286,
+                    1312.97,
+                    1317.01
+                  ]
+                }
+              }
+            }
+          },
+          {
+            "code": "000001.SZ",
+            "name": "平安银行",
+            "metrics": {
+              "pe_ttm": {
+                "value": 5.161932,
+                "rawValue": 5.161932,
+                "provenance": {
+                  "endpoint": "/api/a-share/valuations/snapshot",
+                  "sourceField": "data.item[].pe_ttm",
+                  "unit": "times",
+                  "definition": "供应商 PE TTM，倍；零或负值不自动解释为便宜",
+                  "provider": "扶摇",
+                  "retrievedAt": "2026-10-16T02:27:56.742Z",
+                  "requestId": "8c2fbf8ca6554ea99fe294858c8006a5",
+                  "providerTimestamp": "2026-10-16T02:27:58.000Z",
+                  "timestampStatus": "known"
+                },
+                "issue": null
+              },
+              "roe_annual": {
+                "value": 9.15,
+                "rawValue": "9.1500",
+                "provenance": {
+                  "endpoint": "/api/a-share/financials/indicators",
+                  "sourceField": "data.abilities[].indicators[index_id=index_weighted_avg_roe].value",
+                  "unit": "percent",
+                  "reportPeriod": "2025-4",
+                  "disclosureDate": null,
+                  "definition": "index_weighted_avg_roe，2025 年报，供应商百分数原值；不表示经营改善",
+                  "provider": "扶摇",
+                  "retrievedAt": "2026-10-16T02:27:57.425Z",
+                  "requestId": "9f95a1367fe148c5a1075bccf9212c60",
+                  "providerTimestamp": null,
+                  "timestampStatus": "not-provided"
+                },
+                "issue": null
+              },
+              "daily_volatility_60d": {
+                "value": 1.059002926752867,
+                "rawValue": null,
+                "provenance": {
+                  "endpoint": "/api/a-share/prices/historical",
+                  "sourceField": "data.item[].close_price / date_ms",
+                  "unit": "percent",
+                  "adjustment": "forward",
+                  "window": 60,
+                  "definition": "60 个日简单收益率的样本标准差 ×100；61 个前复权收盘价；分母 59；不年化",
+                  "provider": "扶摇",
+                  "retrievedAt": "2026-10-16T02:27:57.668Z",
+                  "requestId": "e981e7440c7145339eb4578ac202718b",
+                  "providerTimestamp": "2026-10-15T16:00:00.000Z",
+                  "timestampStatus": "known",
+                  "windowStart": "2026-07-16",
+                  "windowEnd": "2026-10-16"
+                },
+                "issue": null,
+                "derivedInputs": {
+                  "dates": [
+                    "2026-07-16",
+                    "2026-07-17",
+                    "2026-07-20",
+                    "2026-07-21",
+                    "2026-07-22",
+                    "2026-07-23",
+                    "2026-07-24",
+                    "2026-07-27",
+                    "2026-07-28",
+                    "2026-07-29",
+                    "2026-07-30",
+                    "2026-07-31",
+                    "2026-08-03",
+                    "2026-08-04",
+                    "2026-08-05",
+                    "2026-08-06",
+                    "2026-08-07",
+                    "2026-08-10",
+                    "2026-08-11",
+                    "2026-08-12",
+                    "2026-08-13",
+                    "2026-08-14",
+                    "2026-08-17",
+                    "2026-08-18",
+                    "2026-08-19",
+                    "2026-08-20",
+                    "2026-08-21",
+                    "2026-08-24",
+                    "2026-08-25",
+                    "2026-08-26",
+                    "2026-08-27",
+                    "2026-08-28",
+                    "2026-08-31",
+                    "2026-09-01",
+                    "2026-09-02",
+                    "2026-09-03",
+                    "2026-09-04",
+                    "2026-09-07",
+                    "2026-09-08",
+                    "2026-09-09",
+                    "2026-09-10",
+                    "2026-09-11",
+                    "2026-09-14",
+                    "2026-09-15",
+                    "2026-09-16",
+                    "2026-09-17",
+                    "2026-09-18",
+                    "2026-09-21",
+                    "2026-09-22",
+                    "2026-09-23",
+                    "2026-09-24",
+                    "2026-09-28",
+                    "2026-09-29",
+                    "2026-09-30",
+                    "2026-10-08",
+                    "2026-10-09",
+                    "2026-10-12",
+                    "2026-10-13",
+                    "2026-10-14",
+                    "2026-10-15",
+                    "2026-10-16"
+                  ],
+                  "closes": [
+                    10.520999999999999,
+                    10.530999999999999,
+                    10.731,
+                    10.591,
+                    10.731,
+                    10.831,
+                    10.850999999999999,
+                    10.860999999999999,
+                    10.950999999999999,
+                    11.030999999999999,
+                    11.360999999999999,
+                    11.381,
+                    11.370999999999999,
+                    11.190999999999999,
+                    11.001,
+                    11.020999999999999,
+                    10.940999999999999,
+                    11.040999999999999,
+                    11.011,
+                    11.001,
+                    11.001,
+                    10.860999999999999,
+                    10.850999999999999,
+                    10.801,
+                    11.020999999999999,
+                    11.151,
+                    11.161,
+                    11.311,
+                    11.341,
+                    11.481,
+                    11.341,
+                    11.401,
+                    11.471,
+                    11.671,
+                    11.661,
+                    11.631,
+                    11.641,
+                    11.450999999999999,
+                    11.530999999999999,
+                    11.450999999999999,
+                    11.600999999999999,
+                    11.491,
+                    11.600999999999999,
+                    11.571,
+                    11.450999999999999,
+                    11.360999999999999,
+                    11.450999999999999,
+                    11.481,
+                    11.461,
+                    11.350999999999999,
+                    11.3,
+                    11.3,
+                    11.35,
+                    11.57,
+                    11.78,
+                    11.59,
+                    11.73,
+                    11.57,
+                    11.5,
+                    11.41,
+                    11.56
+                  ]
+                }
+              }
+            }
+          },
+          {
+            "code": "300033.SZ",
+            "name": "同花顺",
+            "metrics": {
+              "pe_ttm": {
+                "value": 41.4026,
+                "rawValue": 41.4026,
+                "provenance": {
+                  "endpoint": "/api/a-share/valuations/snapshot",
+                  "sourceField": "data.item[].pe_ttm",
+                  "unit": "times",
+                  "definition": "供应商 PE TTM，倍；零或负值不自动解释为便宜",
+                  "provider": "扶摇",
+                  "retrievedAt": "2026-10-16T02:27:56.742Z",
+                  "requestId": "8c2fbf8ca6554ea99fe294858c8006a5",
+                  "providerTimestamp": "2026-10-16T02:27:58.000Z",
+                  "timestampStatus": "known"
+                },
+                "issue": null
+              },
+              "roe_annual": {
+                "value": 38.54,
+                "rawValue": "38.5400",
+                "provenance": {
+                  "endpoint": "/api/a-share/financials/indicators",
+                  "sourceField": "data.abilities[].indicators[index_id=index_weighted_avg_roe].value",
+                  "unit": "percent",
+                  "reportPeriod": "2025-4",
+                  "disclosureDate": null,
+                  "definition": "index_weighted_avg_roe，2025 年报，供应商百分数原值；不表示经营改善",
+                  "provider": "扶摇",
+                  "retrievedAt": "2026-10-16T02:27:57.876Z",
+                  "requestId": "20c876a2795a423298f007885b080738",
+                  "providerTimestamp": null,
+                  "timestampStatus": "not-provided"
+                },
+                "issue": null
+              },
+              "daily_volatility_60d": {
+                "value": 2.3937235827388177,
+                "rawValue": null,
+                "provenance": {
+                  "endpoint": "/api/a-share/prices/historical",
+                  "sourceField": "data.item[].close_price / date_ms",
+                  "unit": "percent",
+                  "adjustment": "forward",
+                  "window": 60,
+                  "definition": "60 个日简单收益率的样本标准差 ×100；61 个前复权收盘价；分母 59；不年化",
+                  "provider": "扶摇",
+                  "retrievedAt": "2026-10-16T02:27:57.789Z",
+                  "requestId": "82e5c2ee6d3d4f0a8592cc1d66a96b65",
+                  "providerTimestamp": "2026-10-15T16:00:00.000Z",
+                  "timestampStatus": "known",
+                  "windowStart": "2026-07-16",
+                  "windowEnd": "2026-10-16"
+                },
+                "issue": null,
+                "derivedInputs": {
+                  "dates": [
+                    "2026-07-16",
+                    "2026-07-17",
+                    "2026-07-20",
+                    "2026-07-21",
+                    "2026-07-22",
+                    "2026-07-23",
+                    "2026-07-24",
+                    "2026-07-27",
+                    "2026-07-28",
+                    "2026-07-29",
+                    "2026-07-30",
+                    "2026-07-31",
+                    "2026-08-03",
+                    "2026-08-04",
+                    "2026-08-05",
+                    "2026-08-06",
+                    "2026-08-07",
+                    "2026-08-10",
+                    "2026-08-11",
+                    "2026-08-12",
+                    "2026-08-13",
+                    "2026-08-14",
+                    "2026-08-17",
+                    "2026-08-18",
+                    "2026-08-19",
+                    "2026-08-20",
+                    "2026-08-21",
+                    "2026-08-24",
+                    "2026-08-25",
+                    "2026-08-26",
+                    "2026-08-27",
+                    "2026-08-28",
+                    "2026-08-31",
+                    "2026-09-01",
+                    "2026-09-02",
+                    "2026-09-03",
+                    "2026-09-04",
+                    "2026-09-07",
+                    "2026-09-08",
+                    "2026-09-09",
+                    "2026-09-10",
+                    "2026-09-11",
+                    "2026-09-14",
+                    "2026-09-15",
+                    "2026-09-16",
+                    "2026-09-17",
+                    "2026-09-18",
+                    "2026-09-21",
+                    "2026-09-22",
+                    "2026-09-23",
+                    "2026-09-24",
+                    "2026-09-28",
+                    "2026-09-29",
+                    "2026-09-30",
+                    "2026-10-08",
+                    "2026-10-09",
+                    "2026-10-12",
+                    "2026-10-13",
+                    "2026-10-14",
+                    "2026-10-15",
+                    "2026-10-16"
+                  ],
+                  "closes": [
+                    220.20000000000002,
+                    215.36,
+                    224.71,
+                    231.25,
+                    224.83,
+                    228.14000000000001,
+                    214.45000000000002,
+                    218.35000000000002,
+                    213.78,
+                    223.8,
+                    225.68,
+                    234.76000000000002,
+                    230.89000000000001,
+                    233.31,
+                    242.13000000000002,
+                    238.78,
+                    239.62,
+                    238.31,
+                    235.79000000000002,
+                    233.8,
+                    231.71,
+                    230.06,
+                    235.8,
+                    231.70000000000002,
+                    222.8,
+                    220.02,
+                    221.93,
+                    216.52,
+                    215.28,
+                    222.89000000000001,
+                    233.02,
+                    230.3,
+                    229,
+                    226.83,
+                    216.96,
+                    219.3,
+                    221.8,
+                    216.71,
+                    214.77,
+                    216.26000000000002,
+                    215.60000000000002,
+                    206.8,
+                    205.35000000000002,
+                    203.8,
+                    207.45000000000002,
+                    200.84,
+                    207,
+                    210.46,
+                    210.17000000000002,
+                    208.64,
+                    204.1,
+                    198.05,
+                    199.71,
+                    197.06,
+                    191.3,
+                    200.43,
+                    199.61,
+                    201.32,
+                    199.2,
+                    201.45,
+                    201.09
+                  ]
+                }
+              }
+            }
+          }
+        ]
+      },
+      "result": {
+        "snapshotId": "957d9df5-47af-43cc-97c5-1fbfda48f50e",
+        "logic": "AND",
+        "rules": [
+          {
+            "id": "intent-1",
+            "metric": "pe_ttm",
+            "operator": "lte",
+            "value": 20,
+            "origin": "user",
+            "unit": "times"
+          }
+        ],
+        "stocks": [
+          {
+            "code": "600519.SH",
+            "name": "贵州茅台",
+            "status": "EXCLUDED",
+            "rules": [
+              {
+                "rule": {
+                  "id": "intent-1",
+                  "metric": "pe_ttm",
+                  "operator": "lte",
+                  "value": 20,
+                  "origin": "user",
+                  "unit": "times"
+                },
+                "status": "FAIL",
+                "actualValue": 20.217234,
+                "reason": "20.217234 times lte 20：不满足",
+                "evidence": {
+                  "value": 20.217234,
+                  "rawValue": 20.217234,
+                  "provenance": {
+                    "endpoint": "/api/a-share/valuations/snapshot",
+                    "sourceField": "data.item[].pe_ttm",
+                    "unit": "times",
+                    "definition": "供应商 PE TTM，倍；零或负值不自动解释为便宜",
+                    "provider": "扶摇",
+                    "retrievedAt": "2026-10-16T02:27:56.742Z",
+                    "requestId": "8c2fbf8ca6554ea99fe294858c8006a5",
+                    "providerTimestamp": "2026-10-16T02:27:58.000Z",
+                    "timestampStatus": "known"
+                  },
+                  "issue": null
+                }
+              }
+            ]
+          },
+          {
+            "code": "000001.SZ",
+            "name": "平安银行",
+            "status": "INCLUDED",
+            "rules": [
+              {
+                "rule": {
+                  "id": "intent-1",
+                  "metric": "pe_ttm",
+                  "operator": "lte",
+                  "value": 20,
+                  "origin": "user",
+                  "unit": "times"
+                },
+                "status": "PASS",
+                "actualValue": 5.161932,
+                "reason": "5.161932 times lte 20：满足",
+                "evidence": {
+                  "value": 5.161932,
+                  "rawValue": 5.161932,
+                  "provenance": {
+                    "endpoint": "/api/a-share/valuations/snapshot",
+                    "sourceField": "data.item[].pe_ttm",
+                    "unit": "times",
+                    "definition": "供应商 PE TTM，倍；零或负值不自动解释为便宜",
+                    "provider": "扶摇",
+                    "retrievedAt": "2026-10-16T02:27:56.742Z",
+                    "requestId": "8c2fbf8ca6554ea99fe294858c8006a5",
+                    "providerTimestamp": "2026-10-16T02:27:58.000Z",
+                    "timestampStatus": "known"
+                  },
+                  "issue": null
+                }
+              }
+            ]
+          },
+          {
+            "code": "300033.SZ",
+            "name": "同花顺",
+            "status": "EXCLUDED",
+            "rules": [
+              {
+                "rule": {
+                  "id": "intent-1",
+                  "metric": "pe_ttm",
+                  "operator": "lte",
+                  "value": 20,
+                  "origin": "user",
+                  "unit": "times"
+                },
+                "status": "FAIL",
+                "actualValue": 41.4026,
+                "reason": "41.4026 times lte 20：不满足",
+                "evidence": {
+                  "value": 41.4026,
+                  "rawValue": 41.4026,
+                  "provenance": {
+                    "endpoint": "/api/a-share/valuations/snapshot",
+                    "sourceField": "data.item[].pe_ttm",
+                    "unit": "times",
+                    "definition": "供应商 PE TTM，倍；零或负值不自动解释为便宜",
+                    "provider": "扶摇",
+                    "retrievedAt": "2026-10-16T02:27:56.742Z",
+                    "requestId": "8c2fbf8ca6554ea99fe294858c8006a5",
+                    "providerTimestamp": "2026-10-16T02:27:58.000Z",
+                    "timestampStatus": "known"
+                  },
+                  "issue": null
+                }
+              }
+            ]
+          }
+        ],
+        "counts": {
+          "INCLUDED": 1,
+          "EXCLUDED": 2,
+          "UNKNOWN": 0
+        }
+      },
+      "session": {
+        "expiresAt": "2026-10-16T02:42:57.878Z"
+      },
+      "notice": "仅用于研究与筛选，不构成投资建议；演示范围为 3 只 A 股。"
+    },
+    "financialCallsBefore": 0,
+    "financialCallsAfter": 7
+  },
+  {
+    "at": "2026-10-16T02:28:59.067Z",
+    "route": "/api/compare",
+    "httpStatus": 200,
+    "response": {
+      "comparison": {
+        "snapshotId": "957d9df5-47af-43cc-97c5-1fbfda48f50e",
+        "changedRuleIds": [
+          "intent-1"
+        ],
+        "before": {
+          "snapshotId": "957d9df5-47af-43cc-97c5-1fbfda48f50e",
+          "logic": "AND",
+          "rules": [
+            {
+              "id": "intent-1",
+              "metric": "pe_ttm",
+              "operator": "lte",
+              "value": 20,
+              "origin": "user",
+              "unit": "times"
+            }
+          ],
+          "stocks": [
+            {
+              "code": "600519.SH",
+              "name": "贵州茅台",
+              "status": "EXCLUDED",
+              "rules": [
+                {
+                  "rule": {
+                    "id": "intent-1",
+                    "metric": "pe_ttm",
+                    "operator": "lte",
+                    "value": 20,
+                    "origin": "user",
+                    "unit": "times"
+                  },
+                  "status": "FAIL",
+                  "actualValue": 20.217234,
+                  "reason": "20.217234 times lte 20：不满足",
+                  "evidence": {
+                    "value": 20.217234,
+                    "rawValue": 20.217234,
+                    "provenance": {
+                      "endpoint": "/api/a-share/valuations/snapshot",
+                      "sourceField": "data.item[].pe_ttm",
+                      "unit": "times",
+                      "definition": "供应商 PE TTM，倍；零或负值不自动解释为便宜",
+                      "provider": "扶摇",
+                      "retrievedAt": "2026-10-16T02:27:56.742Z",
+                      "requestId": "8c2fbf8ca6554ea99fe294858c8006a5",
+                      "providerTimestamp": "2026-10-16T02:27:58.000Z",
+                      "timestampStatus": "known"
+                    },
+                    "issue": null
+                  }
+                }
+              ]
+            },
+            {
+              "code": "000001.SZ",
+              "name": "平安银行",
+              "status": "INCLUDED",
+              "rules": [
+                {
+                  "rule": {
+                    "id": "intent-1",
+                    "metric": "pe_ttm",
+                    "operator": "lte",
+                    "value": 20,
+                    "origin": "user",
+                    "unit": "times"
+                  },
+                  "status": "PASS",
+                  "actualValue": 5.161932,
+                  "reason": "5.161932 times lte 20：满足",
+                  "evidence": {
+                    "value": 5.161932,
+                    "rawValue": 5.161932,
+                    "provenance": {
+                      "endpoint": "/api/a-share/valuations/snapshot",
+                      "sourceField": "data.item[].pe_ttm",
+                      "unit": "times",
+                      "definition": "供应商 PE TTM，倍；零或负值不自动解释为便宜",
+                      "provider": "扶摇",
+                      "retrievedAt": "2026-10-16T02:27:56.742Z",
+                      "requestId": "8c2fbf8ca6554ea99fe294858c8006a5",
+                      "providerTimestamp": "2026-10-16T02:27:58.000Z",
+                      "timestampStatus": "known"
+                    },
+                    "issue": null
+                  }
+                }
+              ]
+            },
+            {
+              "code": "300033.SZ",
+              "name": "同花顺",
+              "status": "EXCLUDED",
+              "rules": [
+                {
+                  "rule": {
+                    "id": "intent-1",
+                    "metric": "pe_ttm",
+                    "operator": "lte",
+                    "value": 20,
+                    "origin": "user",
+                    "unit": "times"
+                  },
+                  "status": "FAIL",
+                  "actualValue": 41.4026,
+                  "reason": "41.4026 times lte 20：不满足",
+                  "evidence": {
+                    "value": 41.4026,
+                    "rawValue": 41.4026,
+                    "provenance": {
+                      "endpoint": "/api/a-share/valuations/snapshot",
+                      "sourceField": "data.item[].pe_ttm",
+                      "unit": "times",
+                      "definition": "供应商 PE TTM，倍；零或负值不自动解释为便宜",
+                      "provider": "扶摇",
+                      "retrievedAt": "2026-10-16T02:27:56.742Z",
+                      "requestId": "8c2fbf8ca6554ea99fe294858c8006a5",
+                      "providerTimestamp": "2026-10-16T02:27:58.000Z",
+                      "timestampStatus": "known"
+                    },
+                    "issue": null
+                  }
+                }
+              ]
+            }
+          ],
+          "counts": {
+            "INCLUDED": 1,
+            "EXCLUDED": 2,
+            "UNKNOWN": 0
+          }
+        },
+        "after": {
+          "snapshotId": "957d9df5-47af-43cc-97c5-1fbfda48f50e",
+          "logic": "AND",
+          "rules": [
+            {
+              "id": "intent-1",
+              "metric": "pe_ttm",
+              "operator": "lte",
+              "value": 45,
+              "origin": "user",
+              "unit": "times"
+            }
+          ],
+          "stocks": [
+            {
+              "code": "600519.SH",
+              "name": "贵州茅台",
+              "status": "INCLUDED",
+              "rules": [
+                {
+                  "rule": {
+                    "id": "intent-1",
+                    "metric": "pe_ttm",
+                    "operator": "lte",
+                    "value": 45,
+                    "origin": "user",
+                    "unit": "times"
+                  },
+                  "status": "PASS",
+                  "actualValue": 20.217234,
+                  "reason": "20.217234 times lte 45：满足",
+                  "evidence": {
+                    "value": 20.217234,
+                    "rawValue": 20.217234,
+                    "provenance": {
+                      "endpoint": "/api/a-share/valuations/snapshot",
+                      "sourceField": "data.item[].pe_ttm",
+                      "unit": "times",
+                      "definition": "供应商 PE TTM，倍；零或负值不自动解释为便宜",
+                      "provider": "扶摇",
+                      "retrievedAt": "2026-10-16T02:27:56.742Z",
+                      "requestId": "8c2fbf8ca6554ea99fe294858c8006a5",
+                      "providerTimestamp": "2026-10-16T02:27:58.000Z",
+                      "timestampStatus": "known"
+                    },
+                    "issue": null
+                  }
+                }
+              ]
+            },
+            {
+              "code": "000001.SZ",
+              "name": "平安银行",
+              "status": "INCLUDED",
+              "rules": [
+                {
+                  "rule": {
+                    "id": "intent-1",
+                    "metric": "pe_ttm",
+                    "operator": "lte",
+                    "value": 45,
+                    "origin": "user",
+                    "unit": "times"
+                  },
+                  "status": "PASS",
+                  "actualValue": 5.161932,
+                  "reason": "5.161932 times lte 45：满足",
+                  "evidence": {
+                    "value": 5.161932,
+                    "rawValue": 5.161932,
+                    "provenance": {
+                      "endpoint": "/api/a-share/valuations/snapshot",
+                      "sourceField": "data.item[].pe_ttm",
+                      "unit": "times",
+                      "definition": "供应商 PE TTM，倍；零或负值不自动解释为便宜",
+                      "provider": "扶摇",
+                      "retrievedAt": "2026-10-16T02:27:56.742Z",
+                      "requestId": "8c2fbf8ca6554ea99fe294858c8006a5",
+                      "providerTimestamp": "2026-10-16T02:27:58.000Z",
+                      "timestampStatus": "known"
+                    },
+                    "issue": null
+                  }
+                }
+              ]
+            },
+            {
+              "code": "300033.SZ",
+              "name": "同花顺",
+              "status": "INCLUDED",
+              "rules": [
+                {
+                  "rule": {
+                    "id": "intent-1",
+                    "metric": "pe_ttm",
+                    "operator": "lte",
+                    "value": 45,
+                    "origin": "user",
+                    "unit": "times"
+                  },
+                  "status": "PASS",
+                  "actualValue": 41.4026,
+                  "reason": "41.4026 times lte 45：满足",
+                  "evidence": {
+                    "value": 41.4026,
+                    "rawValue": 41.4026,
+                    "provenance": {
+                      "endpoint": "/api/a-share/valuations/snapshot",
+                      "sourceField": "data.item[].pe_ttm",
+                      "unit": "times",
+                      "definition": "供应商 PE TTM，倍；零或负值不自动解释为便宜",
+                      "provider": "扶摇",
+                      "retrievedAt": "2026-10-16T02:27:56.742Z",
+                      "requestId": "8c2fbf8ca6554ea99fe294858c8006a5",
+                      "providerTimestamp": "2026-10-16T02:27:58.000Z",
+                      "timestampStatus": "known"
+                    },
+                    "issue": null
+                  }
+                }
+              ]
+            }
+          ],
+          "counts": {
+            "INCLUDED": 3,
+            "EXCLUDED": 0,
+            "UNKNOWN": 0
+          }
+        },
+        "newlyIncluded": [
+          "600519.SH",
+          "300033.SZ"
+        ],
+        "noLongerIncluded": [],
+        "stillIncluded": [
+          "000001.SZ"
+        ],
+        "unknownTransitions": []
+      },
+      "session": {
+        "expiresAt": "2026-10-16T02:42:57.878Z"
+      }
+    },
+    "financialCallsBefore": 7,
+    "financialCallsAfter": 7
+  },
+  {
+    "at": "2026-10-16T02:30:54.259Z",
+    "route": "/api/intent",
+    "httpStatus": 200,
+    "response": {
+      "status": "CLARIFY",
+      "rules": [],
+      "evidence": [],
+      "issues": [
+        {
+          "evidence": "想找稳健的公司",
+          "message": "含义或数值、报告期、窗口不明确，请补充具体条件后重试。"
+        }
+      ],
+      "message": "这次解析不能形成可执行条件。请修改原文重试，或明确选择手动配置。"
+    },
+    "financialCallsBefore": 7,
+    "financialCallsAfter": 7
+  },
+  {
+    "at": "2026-10-16T02:31:27.901Z",
+    "route": "/api/intent",
+    "httpStatus": 200,
+    "response": {
+      "status": "REJECTED",
+      "rules": [],
+      "evidence": [],
+      "issues": [],
+      "message": "AI 提案未通过核验，不能应用为条件。请修改表述重试，或手动配置；不会自动修正阈值或补充条件。"
+    },
+    "financialCallsBefore": 7,
+    "financialCallsAfter": 7
+  },
+  {
+    "at": "2026-10-16T02:31:52.883Z",
+    "route": "/api/intent",
+    "httpStatus": 200,
+    "response": {
+      "status": "REJECTED",
+      "rules": [],
+      "evidence": [],
+      "issues": [],
+      "message": "AI 提案未通过核验，不能应用为条件。请修改表述重试，或手动配置；不会自动修正阈值或补充条件。"
+    },
+    "financialCallsBefore": 7,
+    "financialCallsAfter": 7
+  },
+  {
+    "at": "2026-10-16T02:34:40.819Z",
+    "route": "/api/screen",
+    "httpStatus": 200,
+    "response": {
+      "snapshot": {
+        "id": "89e072c7-0776-4a68-b95f-d4b3739e2385",
+        "createdAt": "2026-10-16T02:34:40.812Z",
+        "asOf": "2026-10-16",
+        "universe": {
+          "name": "三只已验证 A 股开发股票池",
+          "limited": true,
+          "size": 3
+        },
+        "stocks": [
+          {
+            "code": "600519.SH",
+            "name": "贵州茅台",
+            "metrics": {
+              "pe_ttm": {
+                "value": 20.227673,
+                "rawValue": 20.227673,
+                "provenance": {
+                  "endpoint": "/api/a-share/valuations/snapshot",
+                  "sourceField": "data.item[].pe_ttm",
+                  "unit": "times",
+                  "definition": "供应商 PE TTM，倍；零或负值不自动解释为便宜",
+                  "provider": "扶摇",
+                  "retrievedAt": "2026-10-16T02:34:40.183Z",
+                  "requestId": "06500867b996407482e94034279d8fd1",
+                  "providerTimestamp": "2026-10-16T02:34:42.000Z",
+                  "timestampStatus": "known"
+                },
+                "issue": null
+              },
+              "roe_annual": {
+                "value": 32.53,
+                "rawValue": "32.5300",
+                "provenance": {
+                  "endpoint": "/api/a-share/financials/indicators",
+                  "sourceField": "data.abilities[].indicators[index_id=index_weighted_avg_roe].value",
+                  "unit": "percent",
+                  "reportPeriod": "2025-4",
+                  "disclosureDate": null,
+                  "definition": "index_weighted_avg_roe，2025 年报，供应商百分数原值；不表示经营改善",
+                  "provider": "扶摇",
+                  "retrievedAt": "2026-10-16T02:34:40.353Z",
+                  "requestId": "d57920515d8947709f058a93eae49e53",
+                  "providerTimestamp": null,
+                  "timestampStatus": "not-provided"
+                },
+                "issue": null
+              },
+              "daily_volatility_60d": {
+                "value": 1.4708045642624057,
+                "rawValue": null,
+                "provenance": {
+                  "endpoint": "/api/a-share/prices/historical",
+                  "sourceField": "data.item[].close_price / date_ms",
+                  "unit": "percent",
+                  "adjustment": "forward",
+                  "window": 60,
+                  "definition": "60 个日简单收益率的样本标准差 ×100；61 个前复权收盘价；分母 59；不年化",
+                  "provider": "扶摇",
+                  "retrievedAt": "2026-10-16T02:34:40.365Z",
+                  "requestId": "46a11ad87618456e9d4c8b8a821fc1d8",
+                  "providerTimestamp": "2026-10-15T16:00:00.000Z",
+                  "timestampStatus": "known",
+                  "windowStart": "2026-07-16",
+                  "windowEnd": "2026-10-16"
+                },
+                "issue": null,
+                "derivedInputs": {
+                  "dates": [
+                    "2026-07-16",
+                    "2026-07-17",
+                    "2026-07-20",
+                    "2026-07-21",
+                    "2026-07-22",
+                    "2026-07-23",
+                    "2026-07-24",
+                    "2026-07-27",
+                    "2026-07-28",
+                    "2026-07-29",
+                    "2026-07-30",
+                    "2026-07-31",
+                    "2026-08-03",
+                    "2026-08-04",
+                    "2026-08-05",
+                    "2026-08-06",
+                    "2026-08-07",
+                    "2026-08-10",
+                    "2026-08-11",
+                    "2026-08-12",
+                    "2026-08-13",
+                    "2026-08-14",
+                    "2026-08-17",
+                    "2026-08-18",
+                    "2026-08-19",
+                    "2026-08-20",
+                    "2026-08-21",
+                    "2026-08-24",
+                    "2026-08-25",
+                    "2026-08-26",
+                    "2026-08-27",
+                    "2026-08-28",
+                    "2026-08-31",
+                    "2026-09-01",
+                    "2026-09-02",
+                    "2026-09-03",
+                    "2026-09-04",
+                    "2026-09-07",
+                    "2026-09-08",
+                    "2026-09-09",
+                    "2026-09-10",
+                    "2026-09-11",
+                    "2026-09-14",
+                    "2026-09-15",
+                    "2026-09-16",
+                    "2026-09-17",
+                    "2026-09-18",
+                    "2026-09-21",
+                    "2026-09-22",
+                    "2026-09-23",
+                    "2026-09-24",
+                    "2026-09-28",
+                    "2026-09-29",
+                    "2026-09-30",
+                    "2026-10-08",
+                    "2026-10-09",
+                    "2026-10-12",
+                    "2026-10-13",
+                    "2026-10-14",
+                    "2026-10-15",
+                    "2026-10-16"
+                  ],
+                  "closes": [
+                    1258.99,
+                    1253,
+                    1327.5,
+                    1308,
+                    1305,
+                    1292.01,
+                    1297.41,
+                    1289.5,
+                    1320,
+                    1321,
+                    1361.76,
+                    1350.6,
+                    1358.98,
+                    1328.36,
+                    1306.45,
+                    1308.55,
+                    1309.22,
+                    1348.86,
+                    1346.5,
+                    1343,
+                    1355.29,
+                    1341.99,
+                    1293.09,
+                    1297.99,
+                    1307.88,
+                    1291.5,
+                    1272.83,
+                    1304.66,
+                    1304,
+                    1302.8,
+                    1292.3,
+                    1297.4,
+                    1299.52,
+                    1299.56,
+                    1297.5,
+                    1298.88,
+                    1330,
+                    1316.01,
+                    1309.3,
+                    1290.88,
+                    1285.13,
+                    1275.16,
+                    1277.96,
+                    1272.75,
+                    1258,
+                    1266.98,
+                    1257.12,
+                    1252.57,
+                    1253.8,
+                    1251.24,
+                    1237,
+                    1243.88,
+                    1235.58,
+                    1258.62,
+                    1255.79,
+                    1263,
+                    1288,
+                    1274.89,
+                    1286,
+                    1312.97,
+                    1317.79
+                  ]
+                }
+              }
+            }
+          },
+          {
+            "code": "000001.SZ",
+            "name": "平安银行",
+            "metrics": {
+              "pe_ttm": {
+                "value": 5.170863,
+                "rawValue": 5.170863,
+                "provenance": {
+                  "endpoint": "/api/a-share/valuations/snapshot",
+                  "sourceField": "data.item[].pe_ttm",
+                  "unit": "times",
+                  "definition": "供应商 PE TTM，倍；零或负值不自动解释为便宜",
+                  "provider": "扶摇",
+                  "retrievedAt": "2026-10-16T02:34:40.183Z",
+                  "requestId": "06500867b996407482e94034279d8fd1",
+                  "providerTimestamp": "2026-10-16T02:34:42.000Z",
+                  "timestampStatus": "known"
+                },
+                "issue": null
+              },
+              "roe_annual": {
+                "value": 9.15,
+                "rawValue": "9.1500",
+                "provenance": {
+                  "endpoint": "/api/a-share/financials/indicators",
+                  "sourceField": "data.abilities[].indicators[index_id=index_weighted_avg_roe].value",
+                  "unit": "percent",
+                  "reportPeriod": "2025-4",
+                  "disclosureDate": null,
+                  "definition": "index_weighted_avg_roe，2025 年报，供应商百分数原值；不表示经营改善",
+                  "provider": "扶摇",
+                  "retrievedAt": "2026-10-16T02:34:40.543Z",
+                  "requestId": "31e4a8c6e385472daf069664ee99160e",
+                  "providerTimestamp": null,
+                  "timestampStatus": "not-provided"
+                },
+                "issue": null
+              },
+              "daily_volatility_60d": {
+                "value": 1.0624709969646622,
+                "rawValue": null,
+                "provenance": {
+                  "endpoint": "/api/a-share/prices/historical",
+                  "sourceField": "data.item[].close_price / date_ms",
+                  "unit": "percent",
+                  "adjustment": "forward",
+                  "window": 60,
+                  "definition": "60 个日简单收益率的样本标准差 ×100；61 个前复权收盘价；分母 59；不年化",
+                  "provider": "扶摇",
+                  "retrievedAt": "2026-10-16T02:34:40.557Z",
+                  "requestId": "f43865f0fee74a60abcec878f189733e",
+                  "providerTimestamp": "2026-10-15T16:00:00.000Z",
+                  "timestampStatus": "known",
+                  "windowStart": "2026-07-16",
+                  "windowEnd": "2026-10-16"
+                },
+                "issue": null,
+                "derivedInputs": {
+                  "dates": [
+                    "2026-07-16",
+                    "2026-07-17",
+                    "2026-07-20",
+                    "2026-07-21",
+                    "2026-07-22",
+                    "2026-07-23",
+                    "2026-07-24",
+                    "2026-07-27",
+                    "2026-07-28",
+                    "2026-07-29",
+                    "2026-07-30",
+                    "2026-07-31",
+                    "2026-08-03",
+                    "2026-08-04",
+                    "2026-08-05",
+                    "2026-08-06",
+                    "2026-08-07",
+                    "2026-08-10",
+                    "2026-08-11",
+                    "2026-08-12",
+                    "2026-08-13",
+                    "2026-08-14",
+                    "2026-08-17",
+                    "2026-08-18",
+                    "2026-08-19",
+                    "2026-08-20",
+                    "2026-08-21",
+                    "2026-08-24",
+                    "2026-08-25",
+                    "2026-08-26",
+                    "2026-08-27",
+                    "2026-08-28",
+                    "2026-08-31",
+                    "2026-09-01",
+                    "2026-09-02",
+                    "2026-09-03",
+                    "2026-09-04",
+                    "2026-09-07",
+                    "2026-09-08",
+                    "2026-09-09",
+                    "2026-09-10",
+                    "2026-09-11",
+                    "2026-09-14",
+                    "2026-09-15",
+                    "2026-09-16",
+                    "2026-09-17",
+                    "2026-09-18",
+                    "2026-09-21",
+                    "2026-09-22",
+                    "2026-09-23",
+                    "2026-09-24",
+                    "2026-09-28",
+                    "2026-09-29",
+                    "2026-09-30",
+                    "2026-10-08",
+                    "2026-10-09",
+                    "2026-10-12",
+                    "2026-10-13",
+                    "2026-10-14",
+                    "2026-10-15",
+                    "2026-10-16"
+                  ],
+                  "closes": [
+                    10.520999999999999,
+                    10.530999999999999,
+                    10.731,
+                    10.591,
+                    10.731,
+                    10.831,
+                    10.850999999999999,
+                    10.860999999999999,
+                    10.950999999999999,
+                    11.030999999999999,
+                    11.360999999999999,
+                    11.381,
+                    11.370999999999999,
+                    11.190999999999999,
+                    11.001,
+                    11.020999999999999,
+                    10.940999999999999,
+                    11.040999999999999,
+                    11.011,
+                    11.001,
+                    11.001,
+                    10.860999999999999,
+                    10.850999999999999,
+                    10.801,
+                    11.020999999999999,
+                    11.151,
+                    11.161,
+                    11.311,
+                    11.341,
+                    11.481,
+                    11.341,
+                    11.401,
+                    11.471,
+                    11.671,
+                    11.661,
+                    11.631,
+                    11.641,
+                    11.450999999999999,
+                    11.530999999999999,
+                    11.450999999999999,
+                    11.600999999999999,
+                    11.491,
+                    11.600999999999999,
+                    11.571,
+                    11.450999999999999,
+                    11.360999999999999,
+                    11.450999999999999,
+                    11.481,
+                    11.461,
+                    11.350999999999999,
+                    11.3,
+                    11.3,
+                    11.35,
+                    11.57,
+                    11.78,
+                    11.59,
+                    11.73,
+                    11.57,
+                    11.5,
+                    11.41,
+                    11.58
+                  ]
+                }
+              }
+            }
+          },
+          {
+            "code": "300033.SZ",
+            "name": "同花顺",
+            "metrics": {
+              "pe_ttm": {
+                "value": 41.573489,
+                "rawValue": 41.573489,
+                "provenance": {
+                  "endpoint": "/api/a-share/valuations/snapshot",
+                  "sourceField": "data.item[].pe_ttm",
+                  "unit": "times",
+                  "definition": "供应商 PE TTM，倍；零或负值不自动解释为便宜",
+                  "provider": "扶摇",
+                  "retrievedAt": "2026-10-16T02:34:40.183Z",
+                  "requestId": "06500867b996407482e94034279d8fd1",
+                  "providerTimestamp": "2026-10-16T02:34:42.000Z",
+                  "timestampStatus": "known"
+                },
+                "issue": null
+              },
+              "roe_annual": {
+                "value": 38.54,
+                "rawValue": "38.5400",
+                "provenance": {
+                  "endpoint": "/api/a-share/financials/indicators",
+                  "sourceField": "data.abilities[].indicators[index_id=index_weighted_avg_roe].value",
+                  "unit": "percent",
+                  "reportPeriod": "2025-4",
+                  "disclosureDate": null,
+                  "definition": "index_weighted_avg_roe，2025 年报，供应商百分数原值；不表示经营改善",
+                  "provider": "扶摇",
+                  "retrievedAt": "2026-10-16T02:34:40.811Z",
+                  "requestId": "fe3ba2b48efe4657b6f30e50fbc23f4f",
+                  "providerTimestamp": null,
+                  "timestampStatus": "not-provided"
+                },
+                "issue": null
+              },
+              "daily_volatility_60d": {
+                "value": 2.394152174166127,
+                "rawValue": null,
+                "provenance": {
+                  "endpoint": "/api/a-share/prices/historical",
+                  "sourceField": "data.item[].close_price / date_ms",
+                  "unit": "percent",
+                  "adjustment": "forward",
+                  "window": 60,
+                  "definition": "60 个日简单收益率的样本标准差 ×100；61 个前复权收盘价；分母 59；不年化",
+                  "provider": "扶摇",
+                  "retrievedAt": "2026-10-16T02:34:40.732Z",
+                  "requestId": "edae2ea2852c4c5fbc94c541c7fd3521",
+                  "providerTimestamp": "2026-10-15T16:00:00.000Z",
+                  "timestampStatus": "known",
+                  "windowStart": "2026-07-16",
+                  "windowEnd": "2026-10-16"
+                },
+                "issue": null,
+                "derivedInputs": {
+                  "dates": [
+                    "2026-07-16",
+                    "2026-07-17",
+                    "2026-07-20",
+                    "2026-07-21",
+                    "2026-07-22",
+                    "2026-07-23",
+                    "2026-07-24",
+                    "2026-07-27",
+                    "2026-07-28",
+                    "2026-07-29",
+                    "2026-07-30",
+                    "2026-07-31",
+                    "2026-08-03",
+                    "2026-08-04",
+                    "2026-08-05",
+                    "2026-08-06",
+                    "2026-08-07",
+                    "2026-08-10",
+                    "2026-08-11",
+                    "2026-08-12",
+                    "2026-08-13",
+                    "2026-08-14",
+                    "2026-08-17",
+                    "2026-08-18",
+                    "2026-08-19",
+                    "2026-08-20",
+                    "2026-08-21",
+                    "2026-08-24",
+                    "2026-08-25",
+                    "2026-08-26",
+                    "2026-08-27",
+                    "2026-08-28",
+                    "2026-08-31",
+                    "2026-09-01",
+                    "2026-09-02",
+                    "2026-09-03",
+                    "2026-09-04",
+                    "2026-09-07",
+                    "2026-09-08",
+                    "2026-09-09",
+                    "2026-09-10",
+                    "2026-09-11",
+                    "2026-09-14",
+                    "2026-09-15",
+                    "2026-09-16",
+                    "2026-09-17",
+                    "2026-09-18",
+                    "2026-09-21",
+                    "2026-09-22",
+                    "2026-09-23",
+                    "2026-09-24",
+                    "2026-09-28",
+                    "2026-09-29",
+                    "2026-09-30",
+                    "2026-10-08",
+                    "2026-10-09",
+                    "2026-10-12",
+                    "2026-10-13",
+                    "2026-10-14",
+                    "2026-10-15",
+                    "2026-10-16"
+                  ],
+                  "closes": [
+                    220.20000000000002,
+                    215.36,
+                    224.71,
+                    231.25,
+                    224.83,
+                    228.14000000000001,
+                    214.45000000000002,
+                    218.35000000000002,
+                    213.78,
+                    223.8,
+                    225.68,
+                    234.76000000000002,
+                    230.89000000000001,
+                    233.31,
+                    242.13000000000002,
+                    238.78,
+                    239.62,
+                    238.31,
+                    235.79000000000002,
+                    233.8,
+                    231.71,
+                    230.06,
+                    235.8,
+                    231.70000000000002,
+                    222.8,
+                    220.02,
+                    221.93,
+                    216.52,
+                    215.28,
+                    222.89000000000001,
+                    233.02,
+                    230.3,
+                    229,
+                    226.83,
+                    216.96,
+                    219.3,
+                    221.8,
+                    216.71,
+                    214.77,
+                    216.26000000000002,
+                    215.60000000000002,
+                    206.8,
+                    205.35000000000002,
+                    203.8,
+                    207.45000000000002,
+                    200.84,
+                    207,
+                    210.46,
+                    210.17000000000002,
+                    208.64,
+                    204.1,
+                    198.05,
+                    199.71,
+                    197.06,
+                    191.3,
+                    200.43,
+                    199.61,
+                    201.32,
+                    199.2,
+                    201.45,
+                    201.92
+                  ]
+                }
+              }
+            }
+          }
+        ]
+      },
+      "result": {
+        "snapshotId": "89e072c7-0776-4a68-b95f-d4b3739e2385",
+        "logic": "AND",
+        "rules": [
+          {
+            "id": "pe-positive",
+            "metric": "pe_ttm",
+            "operator": "gt",
+            "value": 0,
+            "origin": "suggested",
+            "unit": "times"
+          },
+          {
+            "id": "pe-max",
+            "metric": "pe_ttm",
+            "operator": "lte",
+            "value": 25,
+            "origin": "suggested",
+            "unit": "times"
+          }
+        ],
+        "stocks": [
+          {
+            "code": "600519.SH",
+            "name": "贵州茅台",
+            "status": "INCLUDED",
+            "rules": [
+              {
+                "rule": {
+                  "id": "pe-positive",
+                  "metric": "pe_ttm",
+                  "operator": "gt",
+                  "value": 0,
+                  "origin": "suggested",
+                  "unit": "times"
+                },
+                "status": "PASS",
+                "actualValue": 20.227673,
+                "reason": "20.227673 times gt 0：满足",
+                "evidence": {
+                  "value": 20.227673,
+                  "rawValue": 20.227673,
+                  "provenance": {
+                    "endpoint": "/api/a-share/valuations/snapshot",
+                    "sourceField": "data.item[].pe_ttm",
+                    "unit": "times",
+                    "definition": "供应商 PE TTM，倍；零或负值不自动解释为便宜",
+                    "provider": "扶摇",
+                    "retrievedAt": "2026-10-16T02:34:40.183Z",
+                    "requestId": "06500867b996407482e94034279d8fd1",
+                    "providerTimestamp": "2026-10-16T02:34:42.000Z",
+                    "timestampStatus": "known"
+                  },
+                  "issue": null
+                }
+              },
+              {
+                "rule": {
+                  "id": "pe-max",
+                  "metric": "pe_ttm",
+                  "operator": "lte",
+                  "value": 25,
+                  "origin": "suggested",
+                  "unit": "times"
+                },
+                "status": "PASS",
+                "actualValue": 20.227673,
+                "reason": "20.227673 times lte 25：满足",
+                "evidence": {
+                  "value": 20.227673,
+                  "rawValue": 20.227673,
+                  "provenance": {
+                    "endpoint": "/api/a-share/valuations/snapshot",
+                    "sourceField": "data.item[].pe_ttm",
+                    "unit": "times",
+                    "definition": "供应商 PE TTM，倍；零或负值不自动解释为便宜",
+                    "provider": "扶摇",
+                    "retrievedAt": "2026-10-16T02:34:40.183Z",
+                    "requestId": "06500867b996407482e94034279d8fd1",
+                    "providerTimestamp": "2026-10-16T02:34:42.000Z",
+                    "timestampStatus": "known"
+                  },
+                  "issue": null
+                }
+              }
+            ]
+          },
+          {
+            "code": "000001.SZ",
+            "name": "平安银行",
+            "status": "INCLUDED",
+            "rules": [
+              {
+                "rule": {
+                  "id": "pe-positive",
+                  "metric": "pe_ttm",
+                  "operator": "gt",
+                  "value": 0,
+                  "origin": "suggested",
+                  "unit": "times"
+                },
+                "status": "PASS",
+                "actualValue": 5.170863,
+                "reason": "5.170863 times gt 0：满足",
+                "evidence": {
+                  "value": 5.170863,
+                  "rawValue": 5.170863,
+                  "provenance": {
+                    "endpoint": "/api/a-share/valuations/snapshot",
+                    "sourceField": "data.item[].pe_ttm",
+                    "unit": "times",
+                    "definition": "供应商 PE TTM，倍；零或负值不自动解释为便宜",
+                    "provider": "扶摇",
+                    "retrievedAt": "2026-10-16T02:34:40.183Z",
+                    "requestId": "06500867b996407482e94034279d8fd1",
+                    "providerTimestamp": "2026-10-16T02:34:42.000Z",
+                    "timestampStatus": "known"
+                  },
+                  "issue": null
+                }
+              },
+              {
+                "rule": {
+                  "id": "pe-max",
+                  "metric": "pe_ttm",
+                  "operator": "lte",
+                  "value": 25,
+                  "origin": "suggested",
+                  "unit": "times"
+                },
+                "status": "PASS",
+                "actualValue": 5.170863,
+                "reason": "5.170863 times lte 25：满足",
+                "evidence": {
+                  "value": 5.170863,
+                  "rawValue": 5.170863,
+                  "provenance": {
+                    "endpoint": "/api/a-share/valuations/snapshot",
+                    "sourceField": "data.item[].pe_ttm",
+                    "unit": "times",
+                    "definition": "供应商 PE TTM，倍；零或负值不自动解释为便宜",
+                    "provider": "扶摇",
+                    "retrievedAt": "2026-10-16T02:34:40.183Z",
+                    "requestId": "06500867b996407482e94034279d8fd1",
+                    "providerTimestamp": "2026-10-16T02:34:42.000Z",
+                    "timestampStatus": "known"
+                  },
+                  "issue": null
+                }
+              }
+            ]
+          },
+          {
+            "code": "300033.SZ",
+            "name": "同花顺",
+            "status": "EXCLUDED",
+            "rules": [
+              {
+                "rule": {
+                  "id": "pe-positive",
+                  "metric": "pe_ttm",
+                  "operator": "gt",
+                  "value": 0,
+                  "origin": "suggested",
+                  "unit": "times"
+                },
+                "status": "PASS",
+                "actualValue": 41.573489,
+                "reason": "41.573489 times gt 0：满足",
+                "evidence": {
+                  "value": 41.573489,
+                  "rawValue": 41.573489,
+                  "provenance": {
+                    "endpoint": "/api/a-share/valuations/snapshot",
+                    "sourceField": "data.item[].pe_ttm",
+                    "unit": "times",
+                    "definition": "供应商 PE TTM，倍；零或负值不自动解释为便宜",
+                    "provider": "扶摇",
+                    "retrievedAt": "2026-10-16T02:34:40.183Z",
+                    "requestId": "06500867b996407482e94034279d8fd1",
+                    "providerTimestamp": "2026-10-16T02:34:42.000Z",
+                    "timestampStatus": "known"
+                  },
+                  "issue": null
+                }
+              },
+              {
+                "rule": {
+                  "id": "pe-max",
+                  "metric": "pe_ttm",
+                  "operator": "lte",
+                  "value": 25,
+                  "origin": "suggested",
+                  "unit": "times"
+                },
+                "status": "FAIL",
+                "actualValue": 41.573489,
+                "reason": "41.573489 times lte 25：不满足",
+                "evidence": {
+                  "value": 41.573489,
+                  "rawValue": 41.573489,
+                  "provenance": {
+                    "endpoint": "/api/a-share/valuations/snapshot",
+                    "sourceField": "data.item[].pe_ttm",
+                    "unit": "times",
+                    "definition": "供应商 PE TTM，倍；零或负值不自动解释为便宜",
+                    "provider": "扶摇",
+                    "retrievedAt": "2026-10-16T02:34:40.183Z",
+                    "requestId": "06500867b996407482e94034279d8fd1",
+                    "providerTimestamp": "2026-10-16T02:34:42.000Z",
+                    "timestampStatus": "known"
+                  },
+                  "issue": null
+                }
+              }
+            ]
+          }
+        ],
+        "counts": {
+          "INCLUDED": 2,
+          "EXCLUDED": 1,
+          "UNKNOWN": 0
+        }
+      },
+      "session": {
+        "expiresAt": "2026-10-16T02:49:40.816Z"
+      },
+      "notice": "仅用于研究与筛选，不构成投资建议；演示范围为 3 只 A 股。"
+    },
+    "financialCallsBefore": 7,
+    "financialCallsAfter": 14
+  }
+]

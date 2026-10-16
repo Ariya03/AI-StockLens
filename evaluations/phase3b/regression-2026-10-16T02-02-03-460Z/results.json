@@ -1,0 +1,992 @@
+[
+  {
+    "id": "PE_LONG",
+    "input": "帮我找市盈率不超过20倍的股票。",
+    "expected": "READY",
+    "operator": "lte",
+    "round": 1,
+    "rawText": "{\"outcome\":\"READY\",\"conditions\":[{\"metric\":\"pe_ttm\",\"operator\":\"lte\",\"value\":20,\"evidence\":\"市盈率不超过20倍\"}],\"issues\":[]}",
+    "output": {
+      "outcome": "READY",
+      "conditions": [
+        {
+          "metric": "pe_ttm",
+          "operator": "lte",
+          "value": 20,
+          "evidence": "市盈率不超过20倍"
+        }
+      ],
+      "issues": []
+    },
+    "validation": {
+      "accepted": true,
+      "errors": [],
+      "parsed": {
+        "outcome": "READY",
+        "conditions": [
+          {
+            "metric": "pe_ttm",
+            "operator": "lte",
+            "value": 20,
+            "evidence": "市盈率不超过20倍"
+          }
+        ],
+        "issues": []
+      },
+      "executableRules": [
+        {
+          "id": "intent-1",
+          "metric": "pe_ttm",
+          "operator": "lte",
+          "value": 20,
+          "unit": "times",
+          "origin": "user"
+        }
+      ],
+      "spans": [
+        {
+          "evidence": "市盈率不超过20倍",
+          "start": 3,
+          "end": 12
+        }
+      ]
+    },
+    "apiStatus": 200,
+    "apiResponse": {
+      "status": "READY",
+      "rules": [
+        {
+          "id": "intent-1",
+          "metric": "pe_ttm",
+          "operator": "lte",
+          "value": 20,
+          "unit": "times",
+          "origin": "user"
+        }
+      ],
+      "evidence": [
+        "市盈率不超过20倍"
+      ],
+      "issues": [],
+      "message": "提案通过有限的确定性核验。请对照原文逐条审阅，确认后才会替换编辑中的条件；不会自动筛选。"
+    },
+    "latencyMs": 5117,
+    "pass": true,
+    "executionBlocked": false,
+    "failureReason": null
+  },
+  {
+    "id": "PE_NO_PUNCT",
+    "input": "PE不超过20倍",
+    "expected": "READY",
+    "operator": "lte",
+    "round": 1,
+    "rawText": "{\"outcome\":\"READY\",\"conditions\":[{\"metric\":\"pe_ttm\",\"operator\":\"lte\",\"value\":20,\"evidence\":\"PE不超过20倍\"}],\"issues\":[]}",
+    "output": {
+      "outcome": "READY",
+      "conditions": [
+        {
+          "metric": "pe_ttm",
+          "operator": "lte",
+          "value": 20,
+          "evidence": "PE不超过20倍"
+        }
+      ],
+      "issues": []
+    },
+    "validation": {
+      "accepted": true,
+      "errors": [],
+      "parsed": {
+        "outcome": "READY",
+        "conditions": [
+          {
+            "metric": "pe_ttm",
+            "operator": "lte",
+            "value": 20,
+            "evidence": "PE不超过20倍"
+          }
+        ],
+        "issues": []
+      },
+      "executableRules": [
+        {
+          "id": "intent-1",
+          "metric": "pe_ttm",
+          "operator": "lte",
+          "value": 20,
+          "unit": "times",
+          "origin": "user"
+        }
+      ],
+      "spans": [
+        {
+          "evidence": "PE不超过20倍",
+          "start": 0,
+          "end": 8
+        }
+      ]
+    },
+    "apiStatus": 200,
+    "apiResponse": {
+      "status": "READY",
+      "rules": [
+        {
+          "id": "intent-1",
+          "metric": "pe_ttm",
+          "operator": "lte",
+          "value": 20,
+          "unit": "times",
+          "origin": "user"
+        }
+      ],
+      "evidence": [
+        "PE不超过20倍"
+      ],
+      "issues": [],
+      "message": "提案通过有限的确定性核验。请对照原文逐条审阅，确认后才会替换编辑中的条件；不会自动筛选。"
+    },
+    "latencyMs": 1685,
+    "pass": true,
+    "executionBlocked": false,
+    "failureReason": null
+  },
+  {
+    "id": "PE_PUNCT",
+    "input": "PE不超过20倍。",
+    "expected": "READY",
+    "operator": "lte",
+    "round": 1,
+    "rawText": "{\"outcome\":\"READY\",\"conditions\":[{\"metric\":\"pe_ttm\",\"operator\":\"lte\",\"value\":20,\"evidence\":\"PE不超过20倍。\"}],\"issues\":[]}",
+    "output": {
+      "outcome": "READY",
+      "conditions": [
+        {
+          "metric": "pe_ttm",
+          "operator": "lte",
+          "value": 20,
+          "evidence": "PE不超过20倍。"
+        }
+      ],
+      "issues": []
+    },
+    "validation": {
+      "accepted": true,
+      "errors": [],
+      "parsed": {
+        "outcome": "READY",
+        "conditions": [
+          {
+            "metric": "pe_ttm",
+            "operator": "lte",
+            "value": 20,
+            "evidence": "PE不超过20倍。"
+          }
+        ],
+        "issues": []
+      },
+      "executableRules": [
+        {
+          "id": "intent-1",
+          "metric": "pe_ttm",
+          "operator": "lte",
+          "value": 20,
+          "unit": "times",
+          "origin": "user"
+        }
+      ],
+      "spans": [
+        {
+          "evidence": "PE不超过20倍。",
+          "start": 0,
+          "end": 9
+        }
+      ]
+    },
+    "apiStatus": 200,
+    "apiResponse": {
+      "status": "READY",
+      "rules": [
+        {
+          "id": "intent-1",
+          "metric": "pe_ttm",
+          "operator": "lte",
+          "value": 20,
+          "unit": "times",
+          "origin": "user"
+        }
+      ],
+      "evidence": [
+        "PE不超过20倍。"
+      ],
+      "issues": [],
+      "message": "提案通过有限的确定性核验。请对照原文逐条审阅，确认后才会替换编辑中的条件；不会自动筛选。"
+    },
+    "latencyMs": 1665,
+    "pass": true,
+    "executionBlocked": false,
+    "failureReason": null
+  },
+  {
+    "id": "PE_STRICT",
+    "input": "市盈率小于20倍",
+    "expected": "READY",
+    "operator": "lt",
+    "round": 1,
+    "rawText": "{\"outcome\":\"READY\",\"conditions\":[{\"metric\":\"pe_ttm\",\"operator\":\"lt\",\"value\":20,\"evidence\":\"市盈率小于20倍\"}],\"issues\":[]}",
+    "output": {
+      "outcome": "READY",
+      "conditions": [
+        {
+          "metric": "pe_ttm",
+          "operator": "lt",
+          "value": 20,
+          "evidence": "市盈率小于20倍"
+        }
+      ],
+      "issues": []
+    },
+    "validation": {
+      "accepted": true,
+      "errors": [],
+      "parsed": {
+        "outcome": "READY",
+        "conditions": [
+          {
+            "metric": "pe_ttm",
+            "operator": "lt",
+            "value": 20,
+            "evidence": "市盈率小于20倍"
+          }
+        ],
+        "issues": []
+      },
+      "executableRules": [
+        {
+          "id": "intent-1",
+          "metric": "pe_ttm",
+          "operator": "lt",
+          "value": 20,
+          "unit": "times",
+          "origin": "user"
+        }
+      ],
+      "spans": [
+        {
+          "evidence": "市盈率小于20倍",
+          "start": 0,
+          "end": 8
+        }
+      ]
+    },
+    "apiStatus": 200,
+    "apiResponse": {
+      "status": "READY",
+      "rules": [
+        {
+          "id": "intent-1",
+          "metric": "pe_ttm",
+          "operator": "lt",
+          "value": 20,
+          "unit": "times",
+          "origin": "user"
+        }
+      ],
+      "evidence": [
+        "市盈率小于20倍"
+      ],
+      "issues": [],
+      "message": "提案通过有限的确定性核验。请对照原文逐条审阅，确认后才会替换编辑中的条件；不会自动筛选。"
+    },
+    "latencyMs": 1610,
+    "pass": true,
+    "executionBlocked": false,
+    "failureReason": null
+  },
+  {
+    "id": "PE_NEGATION",
+    "input": "不要PE大于20倍的股票",
+    "expected": "READY",
+    "operator": "lte",
+    "round": 1,
+    "rawText": "{\"outcome\":\"READY\",\"conditions\":[{\"metric\":\"pe_ttm\",\"operator\":\"lt\",\"value\":20,\"evidence\":\"不要PE大于20倍的股票\"}],\"issues\":[]}",
+    "output": {
+      "outcome": "READY",
+      "conditions": [
+        {
+          "metric": "pe_ttm",
+          "operator": "lt",
+          "value": 20,
+          "evidence": "不要PE大于20倍的股票"
+        }
+      ],
+      "issues": []
+    },
+    "validation": {
+      "accepted": false,
+      "errors": [
+        "OPERATOR_OR_VALUE_NOT_GROUNDED"
+      ],
+      "parsed": null,
+      "executableRules": [],
+      "spans": []
+    },
+    "apiStatus": 200,
+    "apiResponse": {
+      "status": "REJECTED",
+      "rules": [],
+      "evidence": [],
+      "issues": [],
+      "message": "AI 提案未通过核验，不能应用为条件。请修改表述重试，或手动配置；不会自动修正阈值或补充条件。"
+    },
+    "latencyMs": 1702,
+    "pass": false,
+    "executionBlocked": true,
+    "failureReason": [
+      "OPERATOR_OR_VALUE_NOT_GROUNDED"
+    ]
+  },
+  {
+    "id": "OR",
+    "input": "PE不超过20倍或ROE大于10%",
+    "expected": "UNSUPPORTED",
+    "round": 1,
+    "rawText": "{\"outcome\":\"CLARIFY\",\"conditions\":[{\"metric\":\"pe_ttm\",\"operator\":\"lte\",\"value\":20,\"evidence\":\"PE不超过20倍\"},{\"metric\":\"roe_annual\",\"operator\":\"gt\",\"value\":10,\"evidence\":\"ROE大于10%\"}],\"issues\":[]}",
+    "output": {
+      "outcome": "CLARIFY",
+      "conditions": [
+        {
+          "metric": "pe_ttm",
+          "operator": "lte",
+          "value": 20,
+          "evidence": "PE不超过20倍"
+        },
+        {
+          "metric": "roe_annual",
+          "operator": "gt",
+          "value": 10,
+          "evidence": "ROE大于10%"
+        }
+      ],
+      "issues": []
+    },
+    "validation": {
+      "accepted": false,
+      "errors": [
+        "REPORT_NOT_EXPLICIT"
+      ],
+      "parsed": null,
+      "executableRules": [],
+      "spans": []
+    },
+    "apiStatus": 200,
+    "apiResponse": {
+      "status": "REJECTED",
+      "rules": [],
+      "evidence": [],
+      "issues": [],
+      "message": "AI 提案未通过核验，不能应用为条件。请修改表述重试，或手动配置；不会自动修正阈值或补充条件。"
+    },
+    "latencyMs": 2911,
+    "pass": false,
+    "executionBlocked": true,
+    "failureReason": [
+      "REPORT_NOT_EXPLICIT"
+    ]
+  },
+  {
+    "id": "DIVIDEND",
+    "input": "PE不超过20倍，股息率至少3%",
+    "expected": "UNSUPPORTED",
+    "round": 1,
+    "rawText": "{\"outcome\":\"CLARIFY\",\"conditions\":[{\"metric\":\"pe_ttm\",\"operator\":\"lte\",\"value\":20,\"evidence\":\"PE不超过20倍\"},{\"metric\":\"pe_ttm\",\"operator\":\"gte\",\"value\":3,\"evidence\":\"股息率至少3%\"}],\"issues\":[]}",
+    "output": {
+      "outcome": "CLARIFY",
+      "conditions": [
+        {
+          "metric": "pe_ttm",
+          "operator": "lte",
+          "value": 20,
+          "evidence": "PE不超过20倍"
+        },
+        {
+          "metric": "pe_ttm",
+          "operator": "gte",
+          "value": 3,
+          "evidence": "股息率至少3%"
+        }
+      ],
+      "issues": []
+    },
+    "validation": {
+      "accepted": false,
+      "errors": [
+        "METRIC_NOT_IN_EVIDENCE"
+      ],
+      "parsed": null,
+      "executableRules": [],
+      "spans": []
+    },
+    "apiStatus": 200,
+    "apiResponse": {
+      "status": "REJECTED",
+      "rules": [],
+      "evidence": [],
+      "issues": [],
+      "message": "AI 提案未通过核验，不能应用为条件。请修改表述重试，或手动配置；不会自动修正阈值或补充条件。"
+    },
+    "latencyMs": 2730,
+    "pass": false,
+    "executionBlocked": true,
+    "failureReason": [
+      "METRIC_NOT_IN_EVIDENCE"
+    ]
+  },
+  {
+    "id": "AMBIGUOUS",
+    "input": "想找稳健的公司",
+    "expected": "CLARIFY",
+    "round": 1,
+    "rawText": "{\"outcome\":\"CLARIFY\",\"conditions\":[],\"issues\":[{\"kind\":\"AMBIGUOUS\",\"evidence\":\"想找稳健的公司\",\"question\":\"您希望用哪个指标及明确阈值衡量稳健？\"}]}",
+    "output": {
+      "outcome": "CLARIFY",
+      "conditions": [],
+      "issues": [
+        {
+          "kind": "AMBIGUOUS",
+          "evidence": "想找稳健的公司",
+          "question": "您希望用哪个指标及明确阈值衡量稳健？"
+        }
+      ]
+    },
+    "validation": {
+      "accepted": true,
+      "errors": [],
+      "parsed": {
+        "outcome": "CLARIFY",
+        "conditions": [],
+        "issues": [
+          {
+            "kind": "AMBIGUOUS",
+            "evidence": "想找稳健的公司",
+            "question": "您希望用哪个指标及明确阈值衡量稳健？"
+          }
+        ]
+      },
+      "executableRules": [],
+      "spans": []
+    },
+    "apiStatus": 200,
+    "apiResponse": {
+      "status": "CLARIFY",
+      "rules": [],
+      "evidence": [],
+      "issues": [
+        {
+          "evidence": "想找稳健的公司",
+          "message": "含义或数值、报告期、窗口不明确，请补充具体条件后重试。"
+        }
+      ],
+      "message": "这次解析不能形成可执行条件。请修改原文重试，或明确选择手动配置。"
+    },
+    "latencyMs": 1946,
+    "pass": true,
+    "executionBlocked": true,
+    "failureReason": null
+  },
+  {
+    "id": "PE_LONG",
+    "input": "帮我找市盈率不超过20倍的股票。",
+    "expected": "READY",
+    "operator": "lte",
+    "round": 2,
+    "rawText": "{\"outcome\":\"READY\",\"conditions\":[{\"metric\":\"pe_ttm\",\"operator\":\"lte\",\"value\":20,\"evidence\":\"市盈率不超过20倍\"}],\"issues\":[]}",
+    "output": {
+      "outcome": "READY",
+      "conditions": [
+        {
+          "metric": "pe_ttm",
+          "operator": "lte",
+          "value": 20,
+          "evidence": "市盈率不超过20倍"
+        }
+      ],
+      "issues": []
+    },
+    "validation": {
+      "accepted": true,
+      "errors": [],
+      "parsed": {
+        "outcome": "READY",
+        "conditions": [
+          {
+            "metric": "pe_ttm",
+            "operator": "lte",
+            "value": 20,
+            "evidence": "市盈率不超过20倍"
+          }
+        ],
+        "issues": []
+      },
+      "executableRules": [
+        {
+          "id": "intent-1",
+          "metric": "pe_ttm",
+          "operator": "lte",
+          "value": 20,
+          "unit": "times",
+          "origin": "user"
+        }
+      ],
+      "spans": [
+        {
+          "evidence": "市盈率不超过20倍",
+          "start": 3,
+          "end": 12
+        }
+      ]
+    },
+    "apiStatus": 200,
+    "apiResponse": {
+      "status": "READY",
+      "rules": [
+        {
+          "id": "intent-1",
+          "metric": "pe_ttm",
+          "operator": "lte",
+          "value": 20,
+          "unit": "times",
+          "origin": "user"
+        }
+      ],
+      "evidence": [
+        "市盈率不超过20倍"
+      ],
+      "issues": [],
+      "message": "提案通过有限的确定性核验。请对照原文逐条审阅，确认后才会替换编辑中的条件；不会自动筛选。"
+    },
+    "latencyMs": 1611,
+    "pass": true,
+    "executionBlocked": false,
+    "failureReason": null
+  },
+  {
+    "id": "PE_NO_PUNCT",
+    "input": "PE不超过20倍",
+    "expected": "READY",
+    "operator": "lte",
+    "round": 2,
+    "rawText": "{\"outcome\":\"READY\",\"conditions\":[{\"metric\":\"pe_ttm\",\"operator\":\"lte\",\"value\":20,\"evidence\":\"PE不超过20倍\"}],\"issues\":[]}",
+    "output": {
+      "outcome": "READY",
+      "conditions": [
+        {
+          "metric": "pe_ttm",
+          "operator": "lte",
+          "value": 20,
+          "evidence": "PE不超过20倍"
+        }
+      ],
+      "issues": []
+    },
+    "validation": {
+      "accepted": true,
+      "errors": [],
+      "parsed": {
+        "outcome": "READY",
+        "conditions": [
+          {
+            "metric": "pe_ttm",
+            "operator": "lte",
+            "value": 20,
+            "evidence": "PE不超过20倍"
+          }
+        ],
+        "issues": []
+      },
+      "executableRules": [
+        {
+          "id": "intent-1",
+          "metric": "pe_ttm",
+          "operator": "lte",
+          "value": 20,
+          "unit": "times",
+          "origin": "user"
+        }
+      ],
+      "spans": [
+        {
+          "evidence": "PE不超过20倍",
+          "start": 0,
+          "end": 8
+        }
+      ]
+    },
+    "apiStatus": 200,
+    "apiResponse": {
+      "status": "READY",
+      "rules": [
+        {
+          "id": "intent-1",
+          "metric": "pe_ttm",
+          "operator": "lte",
+          "value": 20,
+          "unit": "times",
+          "origin": "user"
+        }
+      ],
+      "evidence": [
+        "PE不超过20倍"
+      ],
+      "issues": [],
+      "message": "提案通过有限的确定性核验。请对照原文逐条审阅，确认后才会替换编辑中的条件；不会自动筛选。"
+    },
+    "latencyMs": 1550,
+    "pass": true,
+    "executionBlocked": false,
+    "failureReason": null
+  },
+  {
+    "id": "PE_PUNCT",
+    "input": "PE不超过20倍。",
+    "expected": "READY",
+    "operator": "lte",
+    "round": 2,
+    "rawText": "{\"outcome\":\"READY\",\"conditions\":[{\"metric\":\"pe_ttm\",\"operator\":\"lte\",\"value\":20,\"evidence\":\"PE不超过20倍。\"}],\"issues\":[]}",
+    "output": {
+      "outcome": "READY",
+      "conditions": [
+        {
+          "metric": "pe_ttm",
+          "operator": "lte",
+          "value": 20,
+          "evidence": "PE不超过20倍。"
+        }
+      ],
+      "issues": []
+    },
+    "validation": {
+      "accepted": true,
+      "errors": [],
+      "parsed": {
+        "outcome": "READY",
+        "conditions": [
+          {
+            "metric": "pe_ttm",
+            "operator": "lte",
+            "value": 20,
+            "evidence": "PE不超过20倍。"
+          }
+        ],
+        "issues": []
+      },
+      "executableRules": [
+        {
+          "id": "intent-1",
+          "metric": "pe_ttm",
+          "operator": "lte",
+          "value": 20,
+          "unit": "times",
+          "origin": "user"
+        }
+      ],
+      "spans": [
+        {
+          "evidence": "PE不超过20倍。",
+          "start": 0,
+          "end": 9
+        }
+      ]
+    },
+    "apiStatus": 200,
+    "apiResponse": {
+      "status": "READY",
+      "rules": [
+        {
+          "id": "intent-1",
+          "metric": "pe_ttm",
+          "operator": "lte",
+          "value": 20,
+          "unit": "times",
+          "origin": "user"
+        }
+      ],
+      "evidence": [
+        "PE不超过20倍。"
+      ],
+      "issues": [],
+      "message": "提案通过有限的确定性核验。请对照原文逐条审阅，确认后才会替换编辑中的条件；不会自动筛选。"
+    },
+    "latencyMs": 1551,
+    "pass": true,
+    "executionBlocked": false,
+    "failureReason": null
+  },
+  {
+    "id": "PE_STRICT",
+    "input": "市盈率小于20倍",
+    "expected": "READY",
+    "operator": "lt",
+    "round": 2,
+    "rawText": "{\"outcome\":\"READY\",\"conditions\":[{\"metric\":\"pe_ttm\",\"operator\":\"lt\",\"value\":20,\"evidence\":\"市盈率小于20倍\"}],\"issues\":[]}",
+    "output": {
+      "outcome": "READY",
+      "conditions": [
+        {
+          "metric": "pe_ttm",
+          "operator": "lt",
+          "value": 20,
+          "evidence": "市盈率小于20倍"
+        }
+      ],
+      "issues": []
+    },
+    "validation": {
+      "accepted": true,
+      "errors": [],
+      "parsed": {
+        "outcome": "READY",
+        "conditions": [
+          {
+            "metric": "pe_ttm",
+            "operator": "lt",
+            "value": 20,
+            "evidence": "市盈率小于20倍"
+          }
+        ],
+        "issues": []
+      },
+      "executableRules": [
+        {
+          "id": "intent-1",
+          "metric": "pe_ttm",
+          "operator": "lt",
+          "value": 20,
+          "unit": "times",
+          "origin": "user"
+        }
+      ],
+      "spans": [
+        {
+          "evidence": "市盈率小于20倍",
+          "start": 0,
+          "end": 8
+        }
+      ]
+    },
+    "apiStatus": 200,
+    "apiResponse": {
+      "status": "READY",
+      "rules": [
+        {
+          "id": "intent-1",
+          "metric": "pe_ttm",
+          "operator": "lt",
+          "value": 20,
+          "unit": "times",
+          "origin": "user"
+        }
+      ],
+      "evidence": [
+        "市盈率小于20倍"
+      ],
+      "issues": [],
+      "message": "提案通过有限的确定性核验。请对照原文逐条审阅，确认后才会替换编辑中的条件；不会自动筛选。"
+    },
+    "latencyMs": 1599,
+    "pass": true,
+    "executionBlocked": false,
+    "failureReason": null
+  },
+  {
+    "id": "PE_NEGATION",
+    "input": "不要PE大于20倍的股票",
+    "expected": "READY",
+    "operator": "lte",
+    "round": 2,
+    "rawText": "{\"outcome\":\"READY\",\"conditions\":[{\"metric\":\"pe_ttm\",\"operator\":\"lt\",\"value\":20,\"evidence\":\"不要PE大于20倍的股票\"}],\"issues\":[]}",
+    "output": {
+      "outcome": "READY",
+      "conditions": [
+        {
+          "metric": "pe_ttm",
+          "operator": "lt",
+          "value": 20,
+          "evidence": "不要PE大于20倍的股票"
+        }
+      ],
+      "issues": []
+    },
+    "validation": {
+      "accepted": false,
+      "errors": [
+        "OPERATOR_OR_VALUE_NOT_GROUNDED"
+      ],
+      "parsed": null,
+      "executableRules": [],
+      "spans": []
+    },
+    "apiStatus": 200,
+    "apiResponse": {
+      "status": "REJECTED",
+      "rules": [],
+      "evidence": [],
+      "issues": [],
+      "message": "AI 提案未通过核验，不能应用为条件。请修改表述重试，或手动配置；不会自动修正阈值或补充条件。"
+    },
+    "latencyMs": 1812,
+    "pass": false,
+    "executionBlocked": true,
+    "failureReason": [
+      "OPERATOR_OR_VALUE_NOT_GROUNDED"
+    ]
+  },
+  {
+    "id": "OR",
+    "input": "PE不超过20倍或ROE大于10%",
+    "expected": "UNSUPPORTED",
+    "round": 2,
+    "rawText": "{\"outcome\":\"CLARIFY\",\"conditions\":[{\"metric\":\"pe_ttm\",\"operator\":\"lte\",\"value\":20,\"evidence\":\"PE不超过20倍\"},{\"metric\":\"roe_annual\",\"operator\":\"gt\",\"value\":10,\"evidence\":\"ROE大于10%\"}],\"issues\":[]}",
+    "output": {
+      "outcome": "CLARIFY",
+      "conditions": [
+        {
+          "metric": "pe_ttm",
+          "operator": "lte",
+          "value": 20,
+          "evidence": "PE不超过20倍"
+        },
+        {
+          "metric": "roe_annual",
+          "operator": "gt",
+          "value": 10,
+          "evidence": "ROE大于10%"
+        }
+      ],
+      "issues": []
+    },
+    "validation": {
+      "accepted": false,
+      "errors": [
+        "REPORT_NOT_EXPLICIT"
+      ],
+      "parsed": null,
+      "executableRules": [],
+      "spans": []
+    },
+    "apiStatus": 200,
+    "apiResponse": {
+      "status": "REJECTED",
+      "rules": [],
+      "evidence": [],
+      "issues": [],
+      "message": "AI 提案未通过核验，不能应用为条件。请修改表述重试，或手动配置；不会自动修正阈值或补充条件。"
+    },
+    "latencyMs": 2648,
+    "pass": false,
+    "executionBlocked": true,
+    "failureReason": [
+      "REPORT_NOT_EXPLICIT"
+    ]
+  },
+  {
+    "id": "DIVIDEND",
+    "input": "PE不超过20倍，股息率至少3%",
+    "expected": "UNSUPPORTED",
+    "round": 2,
+    "rawText": "{\"outcome\":\"CLARIFY\",\"conditions\":[{\"metric\":\"pe_ttm\",\"operator\":\"lte\",\"value\":20,\"evidence\":\"PE不超过20倍\"},{\"metric\":\"pe_ttm\",\"operator\":\"gte\",\"value\":3,\"evidence\":\"股息率至少3%\"}],\"issues\":[]}",
+    "output": {
+      "outcome": "CLARIFY",
+      "conditions": [
+        {
+          "metric": "pe_ttm",
+          "operator": "lte",
+          "value": 20,
+          "evidence": "PE不超过20倍"
+        },
+        {
+          "metric": "pe_ttm",
+          "operator": "gte",
+          "value": 3,
+          "evidence": "股息率至少3%"
+        }
+      ],
+      "issues": []
+    },
+    "validation": {
+      "accepted": false,
+      "errors": [
+        "METRIC_NOT_IN_EVIDENCE"
+      ],
+      "parsed": null,
+      "executableRules": [],
+      "spans": []
+    },
+    "apiStatus": 200,
+    "apiResponse": {
+      "status": "REJECTED",
+      "rules": [],
+      "evidence": [],
+      "issues": [],
+      "message": "AI 提案未通过核验，不能应用为条件。请修改表述重试，或手动配置；不会自动修正阈值或补充条件。"
+    },
+    "latencyMs": 2694,
+    "pass": false,
+    "executionBlocked": true,
+    "failureReason": [
+      "METRIC_NOT_IN_EVIDENCE"
+    ]
+  },
+  {
+    "id": "AMBIGUOUS",
+    "input": "想找稳健的公司",
+    "expected": "CLARIFY",
+    "round": 2,
+    "rawText": "{\"outcome\":\"CLARIFY\",\"conditions\":[],\"issues\":[{\"kind\":\"AMBIGUOUS\",\"evidence\":\"想找稳健的公司\",\"question\":\"您希望用哪个指标及明确阈值衡量稳健？\"}]}",
+    "output": {
+      "outcome": "CLARIFY",
+      "conditions": [],
+      "issues": [
+        {
+          "kind": "AMBIGUOUS",
+          "evidence": "想找稳健的公司",
+          "question": "您希望用哪个指标及明确阈值衡量稳健？"
+        }
+      ]
+    },
+    "validation": {
+      "accepted": true,
+      "errors": [],
+      "parsed": {
+        "outcome": "CLARIFY",
+        "conditions": [],
+        "issues": [
+          {
+            "kind": "AMBIGUOUS",
+            "evidence": "想找稳健的公司",
+            "question": "您希望用哪个指标及明确阈值衡量稳健？"
+          }
+        ]
+      },
+      "executableRules": [],
+      "spans": []
+    },
+    "apiStatus": 200,
+    "apiResponse": {
+      "status": "CLARIFY",
+      "rules": [],
+      "evidence": [],
+      "issues": [
+        {
+          "evidence": "想找稳健的公司",
+          "message": "含义或数值、报告期、窗口不明确，请补充具体条件后重试。"
+        }
+      ],
+      "message": "这次解析不能形成可执行条件。请修改原文重试，或明确选择手动配置。"
+    },
+    "latencyMs": 2090,
+    "pass": true,
+    "executionBlocked": true,
+    "failureReason": null
+  }
+]

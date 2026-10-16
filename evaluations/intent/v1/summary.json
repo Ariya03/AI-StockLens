@@ -1,0 +1,246 @@
+{
+  "version": "v1",
+  "cases": 30,
+  "exactPasses": 6,
+  "exactRate": 0.2,
+  "clearCases": 12,
+  "safeReady": 5,
+  "safeReadyRate": 0.4166666666666667,
+  "rawCriticalCases": [
+    {
+      "id": "C08",
+      "errors": [
+        "ALTERED_THRESHOLD_OPERATOR_OR_EXTRA_BOUND"
+      ]
+    },
+    {
+      "id": "A11",
+      "errors": [
+        "UNSUPPORTED_EXECUTABLE_CONDITION"
+      ]
+    },
+    {
+      "id": "A12",
+      "errors": [
+        "UNSUPPORTED_EXECUTABLE_CONDITION"
+      ]
+    },
+    {
+      "id": "A13",
+      "errors": [
+        "UNSUPPORTED_EXECUTABLE_CONDITION"
+      ]
+    },
+    {
+      "id": "A14",
+      "errors": [
+        "UNSUPPORTED_EXECUTABLE_CONDITION"
+      ]
+    },
+    {
+      "id": "A15",
+      "errors": [
+        "UNSUPPORTED_EXECUTABLE_CONDITION"
+      ]
+    },
+    {
+      "id": "A16",
+      "errors": [
+        "UNSUPPORTED_EXECUTABLE_CONDITION",
+        "UNRESOLVED_INTENT_MARKED_READY"
+      ]
+    },
+    {
+      "id": "A17",
+      "errors": [
+        "UNSUPPORTED_EXECUTABLE_CONDITION",
+        "UNRESOLVED_INTENT_MARKED_READY"
+      ]
+    },
+    {
+      "id": "U20",
+      "errors": [
+        "UNSUPPORTED_EXECUTABLE_CONDITION"
+      ]
+    },
+    {
+      "id": "U21",
+      "errors": [
+        "UNSUPPORTED_EXECUTABLE_CONDITION",
+        "UNRESOLVED_INTENT_MARKED_READY"
+      ]
+    },
+    {
+      "id": "U22",
+      "errors": [
+        "UNRESOLVED_INTENT_MARKED_READY"
+      ]
+    },
+    {
+      "id": "U23",
+      "errors": [
+        "ALTERED_THRESHOLD_OPERATOR_OR_EXTRA_BOUND"
+      ]
+    },
+    {
+      "id": "X26",
+      "errors": [
+        "UNSUPPORTED_EXECUTABLE_CONDITION",
+        "UNRESOLVED_INTENT_MARKED_READY"
+      ]
+    },
+    {
+      "id": "X28",
+      "errors": [
+        "UNRESOLVED_INTENT_MARKED_READY"
+      ]
+    }
+  ],
+  "criticalEscapes": 5,
+  "validationRejected": [
+    {
+      "id": "C02",
+      "errors": [
+        "EVIDENCE_NOT_IN_INPUT"
+      ]
+    },
+    {
+      "id": "C04",
+      "errors": [
+        "EVIDENCE_NOT_IN_INPUT"
+      ]
+    },
+    {
+      "id": "C05",
+      "errors": [
+        "EVIDENCE_NOT_IN_INPUT"
+      ]
+    },
+    {
+      "id": "C10",
+      "errors": [
+        "VALUE_NOT_IN_EVIDENCE"
+      ]
+    },
+    {
+      "id": "A11",
+      "errors": [
+        "EVIDENCE_NOT_IN_INPUT",
+        "EVIDENCE_NOT_IN_INPUT",
+        "EVIDENCE_NOT_IN_INPUT"
+      ]
+    },
+    {
+      "id": "A12",
+      "errors": [
+        "VALUE_NOT_IN_EVIDENCE",
+        "VALUE_NOT_IN_EVIDENCE"
+      ]
+    },
+    {
+      "id": "A13",
+      "errors": [
+        "EVIDENCE_NOT_IN_INPUT",
+        "EVIDENCE_NOT_IN_INPUT"
+      ]
+    },
+    {
+      "id": "A14",
+      "errors": [
+        "VALUE_NOT_IN_EVIDENCE",
+        "EVIDENCE_NOT_IN_INPUT"
+      ]
+    },
+    {
+      "id": "A15",
+      "errors": [
+        "VALUE_NOT_IN_EVIDENCE",
+        "VALUE_NOT_IN_EVIDENCE",
+        "VALUE_NOT_IN_EVIDENCE"
+      ]
+    },
+    {
+      "id": "U18",
+      "errors": [
+        "ISSUE_SCHEMA_OR_EVIDENCE"
+      ]
+    },
+    {
+      "id": "U20",
+      "errors": [
+        "MISSING_CLARIFICATION"
+      ]
+    },
+    {
+      "id": "U23",
+      "errors": [
+        "ISSUE_SCHEMA_OR_EVIDENCE"
+      ]
+    },
+    {
+      "id": "X24",
+      "errors": [
+        "EVIDENCE_NOT_IN_INPUT"
+      ]
+    },
+    {
+      "id": "X26",
+      "errors": [
+        "EVIDENCE_NOT_IN_INPUT"
+      ]
+    },
+    {
+      "id": "X27",
+      "errors": [
+        "ISSUE_SCHEMA_OR_EVIDENCE"
+      ]
+    },
+    {
+      "id": "X28",
+      "errors": [
+        "READY_INCOMPLETE",
+        "INVALID_OR_CONTRADICTORY_RULES"
+      ]
+    },
+    {
+      "id": "C29",
+      "errors": [
+        "MISSING_CLARIFICATION"
+      ]
+    }
+  ],
+  "transportFailures": 0,
+  "latencyMs": {
+    "p50": 2287,
+    "p95": 5051,
+    "max": 11499
+  },
+  "recommendation": "NO-GO",
+  "failedCaseIds": [
+    "C02",
+    "C04",
+    "C05",
+    "C08",
+    "C09",
+    "C10",
+    "A11",
+    "A12",
+    "A13",
+    "A14",
+    "A15",
+    "A16",
+    "A17",
+    "U18",
+    "U20",
+    "U21",
+    "U22",
+    "U23",
+    "X24",
+    "X25",
+    "X26",
+    "X27",
+    "X28",
+    "C29"
+  ],
+  "completedAt": "2026-10-15T13:16:10.991Z"
+}

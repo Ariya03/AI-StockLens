@@ -1,0 +1,133 @@
+{
+  "version": "v2",
+  "cases": 30,
+  "exactPasses": 16,
+  "exactRate": 0.5333333333333333,
+  "clearCases": 12,
+  "safeReady": 7,
+  "safeReadyRate": 0.5833333333333334,
+  "rawCriticalCases": [
+    {
+      "id": "C07",
+      "errors": [
+        "ALTERED_THRESHOLD_OPERATOR_OR_EXTRA_BOUND"
+      ]
+    },
+    {
+      "id": "C08",
+      "errors": [
+        "ALTERED_THRESHOLD_OPERATOR_OR_EXTRA_BOUND"
+      ]
+    },
+    {
+      "id": "A17",
+      "errors": [
+        "UNSUPPORTED_EXECUTABLE_CONDITION",
+        "UNRESOLVED_INTENT_MARKED_READY"
+      ]
+    },
+    {
+      "id": "U22",
+      "errors": [
+        "UNRESOLVED_INTENT_MARKED_READY"
+      ]
+    },
+    {
+      "id": "U23",
+      "errors": [
+        "UNSUPPORTED_EXECUTABLE_CONDITION"
+      ]
+    },
+    {
+      "id": "X26",
+      "errors": [
+        "UNSUPPORTED_EXECUTABLE_CONDITION",
+        "UNRESOLVED_INTENT_MARKED_READY"
+      ]
+    }
+  ],
+  "criticalEscapes": 0,
+  "criticalEscapedIds": [],
+  "validationRejected": [
+    {
+      "id": "C06",
+      "errors": [
+        "EVIDENCE_NOT_IN_INPUT",
+        "EVIDENCE_NOT_IN_INPUT"
+      ]
+    },
+    {
+      "id": "C07",
+      "errors": [
+        "EVIDENCE_NOT_IN_INPUT",
+        "METRIC_NOT_IN_EVIDENCE",
+        "OPERATOR_OR_VALUE_NOT_GROUNDED"
+      ]
+    },
+    {
+      "id": "C08",
+      "errors": [
+        "OPERATOR_OR_VALUE_NOT_GROUNDED"
+      ]
+    },
+    {
+      "id": "C10",
+      "errors": [
+        "VALUE_NOT_IN_EVIDENCE",
+        "OPERATOR_OR_VALUE_NOT_GROUNDED"
+      ]
+    },
+    {
+      "id": "A17",
+      "errors": [
+        "WINDOW_NOT_EXPLICIT"
+      ]
+    },
+    {
+      "id": "U22",
+      "errors": [
+        "EVIDENCE_NOT_IN_INPUT"
+      ]
+    },
+    {
+      "id": "U23",
+      "errors": [
+        "EVIDENCE_NOT_IN_INPUT",
+        "METRIC_NOT_IN_EVIDENCE",
+        "REPORT_NOT_EXPLICIT"
+      ]
+    },
+    {
+      "id": "X26",
+      "errors": [
+        "EVIDENCE_NOT_IN_INPUT",
+        "EVIDENCE_NOT_IN_INPUT",
+        "EVIDENCE_NOT_IN_INPUT"
+      ]
+    }
+  ],
+  "transportFailures": 0,
+  "latencyMs": {
+    "p50": 2027,
+    "p95": 4512,
+    "max": 4592
+  },
+  "recommendation": "NO-GO",
+  "failedCaseIds": [
+    "C06",
+    "C07",
+    "C08",
+    "C10",
+    "A17",
+    "U18",
+    "U19",
+    "U20",
+    "U21",
+    "U22",
+    "U23",
+    "X26",
+    "X28",
+    "C29"
+  ],
+  "completedAt": "2026-10-15T13:20:09.170Z"
+}

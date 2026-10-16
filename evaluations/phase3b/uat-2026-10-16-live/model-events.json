@@ -1,0 +1,38 @@
+[
+  {
+    "startedAt": "2026-10-16T02:25:23.247Z",
+    "input": "PE不超过20倍",
+    "model": "qwen2.5:3b",
+    "promptVersion": "v4",
+    "httpStatus": 200,
+    "done": true,
+    "rawText": "{\"outcome\":\"READY\",\"conditions\":[{\"metric\":\"pe_ttm\",\"operator\":\"lte\",\"value\":20,\"evidence\":\"PE不超过20倍\"}],\"issues\":[]}"
+  },
+  {
+    "startedAt": "2026-10-16T02:30:51.483Z",
+    "input": "想找稳健的公司",
+    "model": "qwen2.5:3b",
+    "promptVersion": "v4",
+    "httpStatus": 200,
+    "done": true,
+    "rawText": "{\"outcome\":\"CLARIFY\",\"conditions\":[],\"issues\":[{\"kind\":\"AMBIGUOUS\",\"evidence\":\"想找稳健的公司\",\"question\":\"您希望用哪个指标及明确阈值衡量稳健？\"}]}"
+  },
+  {
+    "startedAt": "2026-10-16T02:31:24.306Z",
+    "input": "PE不超过20倍，股息率至少3%",
+    "model": "qwen2.5:3b",
+    "promptVersion": "v4",
+    "httpStatus": 200,
+    "done": true,
+    "rawText": "{\"outcome\":\"CLARIFY\",\"conditions\":[{\"metric\":\"pe_ttm\",\"operator\":\"lte\",\"value\":20,\"evidence\":\"PE不超过20倍\"},{\"metric\":\"pe_ttm\",\"operator\":\"gte\",\"value\":3,\"evidence\":\"股息率至少3%\"}],\"issues\":[]}"
+  },
+  {
+    "startedAt": "2026-10-16T02:31:49.563Z",
+    "input": "PE不超过20倍或ROE大于10%",
+    "model": "qwen2.5:3b",
+    "promptVersion": "v4",
+    "httpStatus": 200,
+    "done": true,
+    "rawText": "{\"outcome\":\"CLARIFY\",\"conditions\":[{\"metric\":\"pe_ttm\",\"operator\":\"lte\",\"value\":20,\"evidence\":\"PE不超过20倍\"},{\"metric\":\"roe_annual\",\"operator\":\"gt\",\"value\":10,\"evidence\":\"ROE大于10%\"}],\"issues\":[]}"
+  }
+]

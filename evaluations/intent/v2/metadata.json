@@ -1,0 +1,43 @@
+{
+  "version": "v2",
+  "model": {
+    "name": "qwen2.5:3b",
+    "model": "qwen2.5:3b",
+    "modified_at": "2026-06-30T06:30:02.703975027+08:00",
+    "size": 1929912432,
+    "digest": "357c53fb659c5076de1d65ccb0b397446227b71a42be9d1603d46168015c9e4b",
+    "details": {
+      "parent_model": "",
+      "format": "gguf",
+      "family": "qwen2",
+      "families": [
+        "qwen2"
+      ],
+      "parameter_size": "3.1B",
+      "quantization_level": "Q4_K_M",
+      "context_length": 32768,
+      "embedding_length": 2048
+    },
+    "capabilities": [
+      "completion",
+      "tools"
+    ]
+  },
+  "ollamaVersion": "0.35.0",
+  "options": {
+    "temperature": 0,
+    "seed": 42,
+    "num_ctx": 8192,
+    "num_predict": 1200
+  },
+  "startedAt": "2026-10-15T13:18:56.736Z",
+  "promptSha256": "7b2055fbb34a3fae826af1e4b83e5ac3299e7cb088bc823c2daef9c1d0c6841a",
+  "schemaSha256": "b7d270fc540edcc4d3ea9ecf14670405f8bd40c8eef970313962bd037f8d3add",
+  "casesSha256": "4ee6c08a759f9a5fd19102ad80052026ea87457536fab658de51b55446bd706c",
+  "safety": "仅向本机发送公开合成测试意图；不加载.env.local，不发送金融数据，不含API密钥。",
+  "decisionCriteria": {
+    "GO": "无逃逸关键错误；精确通过率>=95%；明确请求可用率>=90%；p95<=20秒",
+    "CONDITIONAL_GO": "无逃逸关键错误；精确通过率>=80%；明确请求可用率>=75%；人工确认与拒绝门控",
+    "NO_GO": "存在逃逸关键错误，或低于上述条件门槛"
+  }
+}

@@ -1,0 +1,186 @@
+[
+  {
+    "at": "2026-10-15T14:00:51.608Z",
+    "input": "PE不超过20倍。",
+    "model": "qwen2.5:3b",
+    "promptVersion": "v2",
+    "response": {
+      "model": "qwen2.5:3b",
+      "created_at": "2026-10-15T14:00:51.551284Z",
+      "message": {
+        "role": "assistant",
+        "content": "{\"outcome\":\"READY\",\"conditions\":[{\"metric\":\"pe_ttm\",\"operator\":\"lte\",\"value\":20,\"evidence\":\"PE不超过20倍。\"}],\"issues\":[]}"
+      },
+      "done": true,
+      "done_reason": "stop",
+      "total_duration": 11800358208,
+      "load_duration": 3643526458,
+      "prompt_eval_count": 1654,
+      "prompt_eval_cached_count": 0,
+      "prompt_eval_duration": 6215005000,
+      "eval_count": 37,
+      "eval_duration": 1875511000
+    }
+  },
+  {
+    "at": "2026-10-15T14:02:26.868Z",
+    "input": "想找稳健的公司。",
+    "model": "qwen2.5:3b",
+    "promptVersion": "v2",
+    "response": {
+      "model": "qwen2.5:3b",
+      "created_at": "2026-10-15T14:02:26.830764Z",
+      "message": {
+        "role": "assistant",
+        "content": "{\"outcome\":\"CLARIFY\",\"conditions\":[],\"issues\":[{\"kind\":\"AMBIGUOUS\",\"evidence\":\"想找稳健的公司。\",\"question\":\"您希望用哪个指标及明确阈值衡量稳健？\"}]}"
+      },
+      "done": true,
+      "done_reason": "stop",
+      "total_duration": 2623456333,
+      "load_duration": 116477000,
+      "prompt_eval_count": 1653,
+      "prompt_eval_cached_count": 1643,
+      "prompt_eval_duration": 212250000,
+      "eval_count": 45,
+      "eval_duration": 2037617000
+    }
+  },
+  {
+    "at": "2026-10-15T14:02:56.723Z",
+    "input": "股息率高一些。",
+    "model": "qwen2.5:3b",
+    "promptVersion": "v2",
+    "response": {
+      "model": "qwen2.5:3b",
+      "created_at": "2026-10-15T14:02:56.665329Z",
+      "message": {
+        "role": "assistant",
+        "content": "{\"outcome\":\"CLARIFY\",\"conditions\":[],\"issues\":[{\"kind\":\"AMBIGUOUS\",\"evidence\":\"股息率高一些。\",\"question\":\"您希望用哪个指标及明确阈值衡量股息率？\"}]}"
+      },
+      "done": true,
+      "done_reason": "stop",
+      "total_duration": 2470989375,
+      "load_duration": 43251542,
+      "prompt_eval_count": 1654,
+      "prompt_eval_cached_count": 1643,
+      "prompt_eval_duration": 185617000,
+      "eval_count": 48,
+      "eval_duration": 2100034000
+    }
+  },
+  {
+    "at": "2026-10-15T14:04:30.914Z",
+    "input": "股息率大于3%。",
+    "model": "qwen2.5:3b",
+    "promptVersion": "v2",
+    "response": {
+      "model": "qwen2.5:3b",
+      "created_at": "2026-10-15T14:04:30.905109Z",
+      "message": {
+        "role": "assistant",
+        "content": "{\"outcome\":\"CLARIFY\",\"conditions\":[],\"issues\":[{\"kind\":\"AMBIGUOUS\",\"evidence\":\"股息率大于3%。\",\"question\":\"您希望用哪个指标及明确阈值衡量股息率？\"}]}"
+      },
+      "done": true,
+      "done_reason": "stop",
+      "total_duration": 2109314625,
+      "load_duration": 28045333,
+      "prompt_eval_count": 1655,
+      "prompt_eval_cached_count": 1646,
+      "prompt_eval_duration": 162615000,
+      "eval_count": 49,
+      "eval_duration": 1806279000
+    }
+  },
+  {
+    "at": "2026-10-15T14:04:50.139Z",
+    "input": "帮我找市盈率不超过20倍的股票。",
+    "model": "qwen2.5:3b",
+    "promptVersion": "v2",
+    "response": {
+      "model": "qwen2.5:3b",
+      "created_at": "2026-10-15T14:04:50.128764Z",
+      "message": {
+        "role": "assistant",
+        "content": "{\"outcome\":\"READY\",\"conditions\":[{\"metric\":\"pe_ttm\",\"operator\":\"lte\",\"value\":20,\"evidence\":\"市盈率不超过20倍。\"}],\"issues\":[]}"
+      },
+      "done": true,
+      "done_reason": "stop",
+      "total_duration": 1998494000,
+      "load_duration": 80149959,
+      "prompt_eval_count": 1660,
+      "prompt_eval_cached_count": 1643,
+      "prompt_eval_duration": 180865000,
+      "eval_count": 39,
+      "eval_duration": 1640881000
+    }
+  },
+  {
+    "at": "2026-10-15T14:08:02.421Z",
+    "input": "PE不超过20倍\n",
+    "model": "qwen2.5:3b",
+    "promptVersion": "v2",
+    "response": {
+      "model": "qwen2.5:3b",
+      "created_at": "2026-10-15T14:08:02.409139Z",
+      "message": {
+        "role": "assistant",
+        "content": "{\"outcome\":\"READY\",\"conditions\":[{\"metric\":\"pe_ttm\",\"operator\":\"lte\",\"value\":20,\"evidence\":\"PE不超过20倍。\"}],\"issues\":[]}"
+      },
+      "done": true,
+      "done_reason": "stop",
+      "total_duration": 1851521584,
+      "load_duration": 45732750,
+      "prompt_eval_count": 1654,
+      "prompt_eval_cached_count": 1643,
+      "prompt_eval_duration": 169007000,
+      "eval_count": 37,
+      "eval_duration": 1462285000
+    }
+  },
+  {
+    "at": "2026-10-15T14:08:54.767Z",
+    "input": "想找稳健的公司\n",
+    "model": "qwen2.5:3b",
+    "promptVersion": "v2",
+    "response": {
+      "model": "qwen2.5:3b",
+      "created_at": "2026-10-15T14:08:54.734743Z",
+      "message": {
+        "role": "assistant",
+        "content": "{\"outcome\":\"CLARIFY\",\"conditions\":[],\"issues\":[{\"kind\":\"AMBIGUOUS\",\"evidence\":\"想找稳健的公司。\",\"question\":\"您希望用哪个指标及明确阈值衡量稳健？\"}]}"
+      },
+      "done": true,
+      "done_reason": "stop",
+      "total_duration": 2398422875,
+      "load_duration": 44726583,
+      "prompt_eval_count": 1653,
+      "prompt_eval_cached_count": 1643,
+      "prompt_eval_duration": 168012000,
+      "eval_count": 45,
+      "eval_duration": 2071856000
+    }
+  },
+  {
+    "at": "2026-10-15T14:09:09.031Z",
+    "input": "我想找估值适中、2025 年盈利能力较强、最近日常波动较小的股票。",
+    "model": "qwen2.5:3b",
+    "promptVersion": "v2",
+    "response": {
+      "model": "qwen2.5:3b",
+      "created_at": "2026-10-15T14:09:09.020777Z",
+      "message": {
+        "role": "assistant",
+        "content": "{\"outcome\":\"READY\",\"conditions\":[{\"metric\":\"roe_annual\",\"operator\":\"gte\",\"value\":10,\"evidence\":\"2025年报ROE>=10%。\"},{\"metric\":\"pe_ttm\",\"operator\":\"lte\",\"value\":15,\"evidence\":\"估值适中。\"},{\"metric\":\"daily_volatility_60d\",\"operator\":\"lte\",\"value\":2,\"evidence\":\"最近日常波动较小。\"}],\"issues\":[]}"
+      },
+      "done": true,
+      "done_reason": "stop",
+      "total_duration": 3876974667,
+      "load_duration": 26210958,
+      "prompt_eval_count": 1670,
+      "prompt_eval_cached_count": 1643,
+      "prompt_eval_duration": 161016000,
+      "eval_count": 93,
+      "eval_duration": 3625584000
+    }
+  }
+]

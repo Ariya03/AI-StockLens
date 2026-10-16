@@ -1,0 +1,37 @@
+{
+  "model": {
+    "name": "qwen2.5:3b",
+    "model": "qwen2.5:3b",
+    "modified_at": "2026-06-30T06:30:02.703975027+08:00",
+    "size": 1929912432,
+    "digest": "357c53fb659c5076de1d65ccb0b397446227b71a42be9d1603d46168015c9e4b",
+    "details": {
+      "parent_model": "",
+      "format": "gguf",
+      "family": "qwen2",
+      "families": [
+        "qwen2"
+      ],
+      "parameter_size": "3.1B",
+      "quantization_level": "Q4_K_M",
+      "context_length": 32768,
+      "embedding_length": 2048
+    },
+    "capabilities": [
+      "completion",
+      "tools"
+    ]
+  },
+  "promptVersion": "v4",
+  "validatorVersion": "v2 unchanged",
+  "options": {
+    "temperature": 0,
+    "seed": 42,
+    "num_ctx": 8192,
+    "num_predict": 1200
+  },
+  "promptSha256": "869a5efa39d93093ab1e927e5c4b1b00f19058a0530fecef99226b7d052f2bcb",
+  "schemaSha256": "b7d270fc540edcc4d3ea9ecf14670405f8bd40c8eef970313962bd037f8d3add",
+  "safety": "只发送此文件定义的公开合成测试意图，不加载金融密钥，不调用扶摇。",
+  "rounds": 2
+}

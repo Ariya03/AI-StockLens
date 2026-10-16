@@ -1,0 +1,32 @@
+import next from '/Users/apple/Desktop/智能选股及策略解释器/node_modules/next/dist/server/next.js';
+import {createServer} from 'node:http';
+import {mkdirSync,writeFileSync} from 'node:fs';
+const directory='evaluations/phase3b/uat-2026-10-16-live';mkdirSync(directory,{recursive:true});
+const provider:unknown[]=[];const models:unknown[]=[];const api:unknown[]=[];let calls=0;
+function save(){writeFileSync(`${directory}/provider-events.json`,JSON.stringify(provider,null,2));writeFileSync(`${directory}/model-events.json`,JSON.stringify(models,null,2));writeFileSync(`${directory}/api-events.json`,JSON.stringify(api,null,2));}
+const upstream=globalThis.fetch;
+globalThis.fetch=(async(input,options)=>{
+ const url=new URL(String(input));const financial=url.origin==='https://fuyao.aicubes.cn';const model=url.href==='http://127.0.0.1:11434/api/chat';
+ const call=financial?++calls:0;const startedAt=new Date().toISOString();
+ try {
+  const response=await upstream(input,options);
+  if(financial){const raw=await response.clone().json();const data=raw.data ?? {};let facts:unknown={};
+   if(url.pathname.includes('valuations'))facts={timestamp:data.timestamp,item:data.item?.map((i:any)=>({thscode:i.thscode,pe_ttm:i.pe_ttm}))};
+   else if(url.pathname.includes('financials'))facts={thscode:data.thscode,report:data.report,roe:data.abilities?.flatMap((a:any)=>a.indicators??[]).filter((i:any)=>i.index_id==='index_weighted_avg_roe').map((i:any)=>({index_id:i.index_id,value:i.value}))};
+   else facts={timestamp:data.timestamp,barCount:data.item?.length,item:data.item?.map((i:any)=>({date_ms:i.date_ms,close_price:i.close_price}))};
+   provider.push({call,startedAt,endpoint:url.pathname,httpStatus:response.status,businessCode:raw.code,requestId:raw.request_id,facts});
+  }
+  if(model){const payload=JSON.parse(String(options?.body));const raw=await response.clone().json();models.push({startedAt,input:payload.messages[1].content,model:payload.model,promptVersion:'v4',httpStatus:response.status,done:raw.done,rawText:raw.message?.content});}
+  save();return response;
+ }catch(e){if(financial)provider.push({call,endpoint:url.pathname,failed:true});if(model)models.push({startedAt,failed:true});save();throw e;}
+}) as typeof fetch;
+const app=next({dev:false,hostname:'127.0.0.1',port:3010});await app.prepare();const handle=app.getRequestHandler();
+createServer((req,res)=>{
+ const route=req.url?.split('?')[0];const countBefore=calls;const chunks:Buffer[]=[];let body='';
+ if(route?.startsWith('/api/')){const write=res.write.bind(res);const end=res.end.bind(res);
+  res.write=((chunk:any,...args:any[])=>{if(chunk)chunks.push(Buffer.isBuffer(chunk)?chunk:Buffer.from(chunk));return write(chunk,...args as any);}) as any;
+  res.end=((chunk:any,...args:any[])=>{if(chunk && typeof chunk!=='function')chunks.push(Buffer.isBuffer(chunk)?chunk:Buffer.from(chunk));const result=end(chunk,...args as any);let response:unknown;let input:unknown;try{response=JSON.parse(Buffer.concat(chunks).toString('utf8'));}catch{}try{input=JSON.parse(body);}catch{}
+   api.push({at:new Date().toISOString(),route,httpStatus:res.statusCode,input,response,financialCallsBefore:countBefore,financialCallsAfter:calls});save();return result;}) as any;
+ }
+ return handle(req,res);
+}).listen(3010,'127.0.0.1',()=>console.log('UAT http://127.0.0.1:3010; evidence '+directory));

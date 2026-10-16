@@ -1,0 +1,21 @@
+# Secrets / environment files; retain the safe template
+.env
+.env.*
+!.env.example
+
+# Dependencies and generated build output
+node_modules/
+.next/
+out/
+coverage/
+*.tsbuildinfo
+*.log
+
+# OS / editor / deployment-tool local state
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+.vercel/
+
+# Keep docs/, tests/, scripts/ and evaluations/ as review evidence.

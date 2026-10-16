@@ -1,0 +1,152 @@
+{
+  "primarySnapshotId": "957d9df5-47af-43cc-97c5-1fbfda48f50e",
+  "financialCalls": {
+    "beforeProposal": 0,
+    "afterProposal": 0,
+    "screenAfter": 7,
+    "compareBefore": 7,
+    "compareAfter": 7,
+    "compareAdditional": 0,
+    "totalIncludingSeparateManualScreen": 14
+  },
+  "providerResponses": [
+    {
+      "call": 1,
+      "httpStatus": 200,
+      "businessCode": 0
+    },
+    {
+      "call": 2,
+      "httpStatus": 200,
+      "businessCode": 0
+    },
+    {
+      "call": 3,
+      "httpStatus": 200,
+      "businessCode": 0
+    },
+    {
+      "call": 4,
+      "httpStatus": 200,
+      "businessCode": 0
+    },
+    {
+      "call": 5,
+      "httpStatus": 200,
+      "businessCode": 0
+    },
+    {
+      "call": 7,
+      "httpStatus": 200,
+      "businessCode": 0
+    },
+    {
+      "call": 6,
+      "httpStatus": 200,
+      "businessCode": 0
+    },
+    {
+      "call": 8,
+      "httpStatus": 200,
+      "businessCode": 0
+    },
+    {
+      "call": 9,
+      "httpStatus": 200,
+      "businessCode": 0
+    },
+    {
+      "call": 10,
+      "httpStatus": 200,
+      "businessCode": 0
+    },
+    {
+      "call": 11,
+      "httpStatus": 200,
+      "businessCode": 0
+    },
+    {
+      "call": 12,
+      "httpStatus": 200,
+      "businessCode": 0
+    },
+    {
+      "call": 14,
+      "httpStatus": 200,
+      "businessCode": 0
+    },
+    {
+      "call": 13,
+      "httpStatus": 200,
+      "businessCode": 0
+    }
+  ],
+  "checks": [
+    {
+      "code": "600519.SH",
+      "name": "贵州茅台",
+      "rawProviderPe": 20.217234,
+      "snapshotPe": 20.217234,
+      "before": "EXCLUDED",
+      "after": "INCLUDED",
+      "evidenceUnchanged": true
+    },
+    {
+      "code": "000001.SZ",
+      "name": "平安银行",
+      "rawProviderPe": 5.161932,
+      "snapshotPe": 5.161932,
+      "before": "INCLUDED",
+      "after": "INCLUDED",
+      "evidenceUnchanged": true
+    },
+    {
+      "code": "300033.SZ",
+      "name": "同花顺",
+      "rawProviderPe": 41.4026,
+      "snapshotPe": 41.4026,
+      "before": "EXCLUDED",
+      "after": "INCLUDED",
+      "evidenceUnchanged": true
+    }
+  ],
+  "modelCalls": [
+    {
+      "input": "PE不超过20倍",
+      "outcome": "READY"
+    },
+    {
+      "input": "想找稳健的公司",
+      "outcome": "CLARIFY"
+    },
+    {
+      "input": "PE不超过20倍，股息率至少3%",
+      "outcome": "CLARIFY"
+    },
+    {
+      "input": "PE不超过20倍或ROE大于10%",
+      "outcome": "CLARIFY"
+    }
+  ],
+  "manualSnapshotId": "89e072c7-0776-4a68-b95f-d4b3739e2385",
+  "financialFieldChecks": [
+    {
+      "code": "600519.SH",
+      "roeProviderMatch": true,
+      "priceInputsProviderMatch": true,
+      "volatilityIndependentCalculation": 1.4706325298686491
+    },
+    {
+      "code": "000001.SZ",
+      "roeProviderMatch": true,
+      "priceInputsProviderMatch": true,
+      "volatilityIndependentCalculation": 1.059002926752867
+    },
+    {
+      "code": "300033.SZ",
+      "roeProviderMatch": true,
+      "priceInputsProviderMatch": true,
+      "volatilityIndependentCalculation": 2.3937235827388177
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+[
+  {
+    "id": "PE_LONG",
+    "input": "帮我找市盈率不超过20倍的股票。",
+    "expected": "READY",
+    "operator": "lte"
+  },
+  {
+    "id": "PE_NO_PUNCT",
+    "input": "PE不超过20倍",
+    "expected": "READY",
+    "operator": "lte"
+  },
+  {
+    "id": "PE_PUNCT",
+    "input": "PE不超过20倍。",
+    "expected": "READY",
+    "operator": "lte"
+  },
+  {
+    "id": "PE_STRICT",
+    "input": "市盈率小于20倍",
+    "expected": "READY",
+    "operator": "lt"
+  },
+  {
+    "id": "PE_NEGATION",
+    "input": "不要PE大于20倍的股票",
+    "expected": "READY",
+    "operator": "lte"
+  },
+  {
+    "id": "OR",
+    "input": "PE不超过20倍或ROE大于10%",
+    "expected": "UNSUPPORTED"
+  },
+  {
+    "id": "DIVIDEND",
+    "input": "PE不超过20倍，股息率至少3%",
+    "expected": "UNSUPPORTED"
+  },
+  {
+    "id": "AMBIGUOUS",
+    "input": "想找稳健的公司",
+    "expected": "CLARIFY"
+  }
+]
