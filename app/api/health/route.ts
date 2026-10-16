@@ -1,6 +1,6 @@
 import { configuredPublicOrigin, upstreamBudgetLimit, isLoopbackHost } from '../../../lib/server/deployment.ts';
 export const runtime = 'nodejs';
-export function GET(request?:Request) {
+export function GET(request:Request) {
   const issues:string[]=[];
   if(!process.env.FUYAO_API_KEY?.trim() || /[\r\n]/.test(process.env.FUYAO_API_KEY??''))issues.push('FINANCIAL_DATA_NOT_CONFIGURED');
   try{

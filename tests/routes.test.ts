@@ -4,7 +4,7 @@ import { POST } from '../app/api/screen/route.ts';
 import { GET } from '../app/api/health/route.ts';
 import { rule } from './helpers.ts';
 test('health does not expose credentials or connect to provider',async()=> {
-  const response=GET(), body=await response.json();
+  const response=GET(new Request('http://localhost/api/health')), body=await response.json();
   assert.equal(response.status,200); assert.equal(body.phase,1);
   assert.ok(body.notice.includes('不构成投资建议'));
 });
