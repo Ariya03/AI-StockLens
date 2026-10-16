@@ -1,0 +1,18 @@
+services:
+  - type: web
+    name: ai-stocklens
+    runtime: node
+    plan: free
+    region: singapore
+    buildCommand: npm ci && npm run build
+    startCommand: npm run start
+    healthCheckPath: /api/health
+    envVars:
+      - key: NODE_VERSION
+        value: "24"
+      - key: FUYAO_API_KEY
+        sync: false
+      - key: STOCKLENS_PUBLIC_ORIGIN
+        sync: false
+      - key: STOCKLENS_MAX_UPSTREAM_CALLS_24H
+        value: "140"
